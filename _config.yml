@@ -114,7 +114,7 @@ author:
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Bluesky"
-      icon: "fas fa-cloud"
+      icon: "fab fa-bluesky"
       url: "https://bsky.app/profile/monirbounadi.bsky.social"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
