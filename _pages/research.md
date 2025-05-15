@@ -12,7 +12,7 @@ Work in Progress
 Popular Articles (in Swedish)
   : ["Bör mainstreamekonomin reformeras?"][bounadi2017] ["Should mainstream economics be reformed?"], *Ekonomisk Debatt* 45 (3): 70--74, 2017.
   : ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub] ["They challenged the legitimacy of the male state authority"], *Liberal Debatt* 2023 (6), 2023.
-  : ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] ["The female teachers who paved the way for women's emancipation"] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3), 2025.
+  : ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] ["The female teachers who paved the way for women's emancipation"] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025.
   
 Pre-Doctoral Research
   : ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies, Sweden,* EBA Working Paper, 2018.
