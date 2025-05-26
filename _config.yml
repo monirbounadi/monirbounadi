@@ -124,7 +124,7 @@ author:
       url: "https://www.linkedin.com/in/monirbounadi"
     - label: "CV"
       icon: "fas fa-file"
-      url: "https://www.monirbounadi.com/assets/BounadiCV.pdf"
+    #  url: "https://www.monirbounadi.com/assets/BounadiCV.pdf"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
