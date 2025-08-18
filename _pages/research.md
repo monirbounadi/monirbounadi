@@ -29,6 +29,6 @@ Citizen Science Projects (in Swedish)
 [bounadi2025_pub]: https://www.nationalekonomi.se/artikel/15135-2/
 [mattias_folkestad_website]: https://mattiasfolkestad.com/
 [jens_oehlen_website]: https://jensoehlen.github.io/
-[jonatan_riberth_website]: https://www.su.se/english/profiles/jori1775-1.351941
+[jonatan_riberth_website]: https://www.jonatanriberth.com/
 [national_archives_of_sweden]: https://riksarkivet.se/startpage
 [ftp]: https://fromthepage.com/riksarkivet/i-demokratins-namn
