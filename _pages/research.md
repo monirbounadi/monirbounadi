@@ -34,4 +34,4 @@ Citizen Science Projects (in Swedish)
 [mattias_folkestad_website]: https://mattiasfolkestad.com/
 [jens_oehlen_website]: https://jensoehlen.github.io/
 [jonatan_riberth_website]: https://www.jonatanriberth.com/
-[burke2024]]: https://www.sciencedirect.com/science/article/pii/S2949836824000083
+[burke2024]: https://www.sciencedirect.com/science/article/pii/S2949836824000083
