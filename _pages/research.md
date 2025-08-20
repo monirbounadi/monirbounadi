@@ -6,12 +6,9 @@ title: "Research"
 ## Work in Progress
 
 - "Mecca's Tidal Pull: Inter-Ethnic Contact and Nationhood"
-- "Female Teachers: The Roots of Women's Emancipation"  
-  (with [Mattias Folkestad][mattias_folkestad_website])
-- "Coffeehouses and the Rise of Science"  
-  (with [Jens Oehlen][jens_oehlen_website])
-- "The Great Reduction of 1680"  
-  (with [Jonatan Riberth][jonatan_riberth_website])
+- "Female Teachers: The Roots of Women's Emancipation"[^1]
+- "Coffeehouses and the Rise of Science"[^2]
+- "The Great Reduction of 1680"[^3]
 
 ---
 
@@ -22,26 +19,30 @@ title: "Research"
 - ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub]  
   ["They challenged the legitimacy of the male state authority"], *Liberal Debatt* 2023 (6), 2023.
 - ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025]  
-  ["The female teachers who paved the way for women's emancipation"]  
-  (with [Mattias Folkestad][mattias_folkestad_website]), *Ekonomisk Debatt* 53 (3): 22–28, 2025.
+  ["The female teachers who paved the way for women's emancipation"][^1], *Ekonomisk Debatt* 53 (3): 22–28, 2025.
 
 ---
 
 ## Pre-Doctoral Research
 
-- ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies (EBA), Sweden,* Working Paper, 2018.  
-
-  This paper is part of a 2024 meta-analysis on the economics of climate and conflict:  
-  Marshall Burke, Joel Ferguson, Solomon Hsiang, and Edward Miguel,  
-  ["New Evidence on the Economics of Climate and Conflict"][burke2024], in *Handbook of the Economics of Conflict*, vol. 1 (Amsterdam: Elsevier, 2024), pp. 249–305.
+- ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies (EBA), Sweden,* Working Paper, 2018.[^4]
 
 ---
 
 ## Citizen Science Projects (in Swedish)
 
 - ["I demokratins namn – kvinnorna som krävde rösträtt"][ftp]  
-  ["In the name of democracy – the women who demanded the right to vote"]  
-  (with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden])
+  ["In the name of democracy – the women who demanded the right to vote"][^5]
+
+---
+
+[^1]: Co-authored with [Mattias Folkestad][mattias_folkestad_website].
+[^2]: Co-authored with [Jens Oehlen][jens_oehlen_website].
+[^3]: Co-authored with [Jonatan Riberth][jonatan_riberth_website].
+[^4]: This paper is part of a 2024 meta-analysis on the economics of climate and conflict:  
+Marshall Burke, Joel Ferguson, Solomon Hsiang, and Edward Miguel,  
+["New Evidence on the Economics of Climate and Conflict"][burke2024], in *Handbook of the Economics of Conflict*, vol. 1 (Amsterdam: Elsevier, 2024), pp. 249–305.
+[^5]: Co-authored with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden].
 
 ---
 
@@ -55,6 +56,4 @@ title: "Research"
 [mattias_folkestad_website]: https://mattiasfolkestad.com/
 [jens_oehlen_website]: https://jensoehlen.github.io/
 [jonatan_riberth_website]: https://www.jonatanriberth.com/
-[national_archives_of_sweden]: https://riksarkivet.se/startpage
-[ftp]: https://fromthepage.com/riksarkivet/i-demokratins-namn
-[burke2024]: https://www.sciencedirect.com/science/article/pii/S2949836824000083
+[nat]()
