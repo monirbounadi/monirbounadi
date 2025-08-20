@@ -22,7 +22,7 @@ Citizen Science Projects (in Swedish)
 
 ---
 
-[^1]: This paper is part of a 2024 meta-analysis on the economics of climate and conflict: Marshall Burke, Joel Ferguson, Solomon Hsiang, and Edward Miguel, [New Evidence on the Economics of Climate and Conflict][burke2024], in Handbook of the Economics of Conflict, vol. 1 (Amsterdam: Elsevier, 2024), 249–305.
+[^1]: This paper is part of a 2024 meta-analysis on the economics of climate and conflict: Marshall Burke, Joel Ferguson, Solomon Hsiang, and Edward Miguel, [‘New Evidence on the Economics of Climate and Conflict’][burke2024], in Handbook of the Economics of Conflict, vol 1 (Amsterdam, Elsevier, 2024) 249–305.
 
 [bounadi2017]: {{ site.url }}/monirbounadi/assets/publications/bounadi2017.pdf
 [bounadi2018]: {{ site.url }}/monirbounadi/assets/publications/bounadi2018.pdf
