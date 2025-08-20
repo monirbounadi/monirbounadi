@@ -32,7 +32,7 @@ Citizen Science Projects (in Swedish)
 [bounadi2023_pub]: https://www.liberaldebatt.se/2023/12/de-utmanade-den-manliga-statsmaktens-legitimitet/
 [bounadi2025_pub]: https://www.nationalekonomi.se/artikel/15135-2/
 [national_archives_of_sweden]: https://riksarkivet.se/startpage 
-[ftp]: https://fromthepage.com/riksarkivet/i-demokratins-namn
+[FTP]: https://fromthepage.com/riksarkivet/i-demokratins-namn
 [mattias_folkestad_website]: https://mattiasfolkestad.com/
 [jens_oehlen_website]: https://jensoehlen.github.io/
 [jonatan_riberth_website]: https://www.jonatanriberth.com/
