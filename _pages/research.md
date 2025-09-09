@@ -9,16 +9,20 @@ Work in Progress
 : "Coffeehouses and the Rise of Science" (*with [Jens Oehlen][jens_oehlen_website]*) 
 : "The Great Reduction of 1680" (*with [Jonatan Riberth][jonatan_riberth_website]*)
 
-Popular Articles (in Swedish) 
-: ["Bör mainstreamekonomin reformeras?"][bounadi2017] ["Should mainstream economics be reformed?"], *Ekonomisk Debatt* 45 (3): 70--74, 2017. 
-: ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub] ["They challenged the legitimacy of the male state authority"], *Liberal Debatt* 2023 (6), 2023. 
-: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] ["The female teachers who paved the way for women's emancipation"] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025.
+Popular Articles in Swedish
+: ["Bör mainstreamekonomin reformeras?"][bounadi2017], *Ekonomisk Debatt* 45 (3): 70--74, 2017. 
+: ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub], *Liberal Debatt* 2023 (6), 2023. 
+: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025.
 
 Pre-Doctoral Research 
 : ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies, Sweden,* EBA Working Paper, 2018.[^1]
 
-Citizen Science Projects (in Swedish) 
-: ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP] ["In the name of democracy – the women who demanded the right to vote"] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+Citizen Science Projects in Swedish 
+: ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP1] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+: ["Utsända och återkomna listor – Namninsamlingen för kvinnors politiska rösträtt 1913–1914"][FTP2] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+: ["Register över listbärare i Stockholm 1913"][FTP3] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+: ["Föreningen för kvinnans politiska rösträtt i Stockholm"][FTP4] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+: ["Göteborgs Förening för Kvinnans Politiska Rösträtt"][FTP5] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
 
 ---
 
@@ -32,7 +36,11 @@ Citizen Science Projects (in Swedish)
 [bounadi2023_pub]: https://www.liberaldebatt.se/2023/12/de-utmanade-den-manliga-statsmaktens-legitimitet/
 [bounadi2025_pub]: https://www.nationalekonomi.se/artikel/15135-2/
 [national_archives_of_sweden]: https://riksarkivet.se/startpage 
-[FTP]: https://fromthepage.com/riksarkivet/i-demokratins-namn
+[FTP1]: https://fromthepage.com/riksarkivet/i-demokratins-namn
+[FTP2]: https://fromthepage.com/riksarkivet/utsanda-och-aterkomna-listor-namninsamlingen-for-kvinnors-politiska-rostratt-1913-1914
+[FTP3]: https://fromthepage.com/riksarkivet/register-over-listbarare-i-stockholm-1913
+[FTP4]: https://fromthepage.com/riksarkivet/foreningen-for-kvinnans-politiska-rostratt-i-stockholm
+[FTP5]: https://fromthepage.com/riksarkivet/goteborgs-forening-for-kvinnans-politiska-rostratt
 [mattias_folkestad_website]: https://mattiasfolkestad.com/
 [jens_oehlen_website]: https://jensoehlen.github.io/
 [jonatan_riberth_website]: https://www.jonatanriberth.com/
