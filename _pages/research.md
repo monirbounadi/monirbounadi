@@ -19,10 +19,6 @@ Pre-Doctoral Research
 
 Citizen Science Projects in Swedish 
 : ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP1] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
-: ["Utsända och återkomna listor – Namninsamlingen för kvinnors politiska rösträtt 1913–1914"][FTP2] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
-: ["Register över listbärare i Stockholm 1913"][FTP3] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
-: ["Föreningen för kvinnans politiska rösträtt i Stockholm"][FTP4] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
-: ["Göteborgs Förening för Kvinnans Politiska Rösträtt"][FTP5] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
 
 ---
 
