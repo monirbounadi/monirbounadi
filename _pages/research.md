@@ -9,13 +9,13 @@ Work in Progress
 : "Coffeehouses and the Rise of Science" (*with [Jens Oehlen][jens_oehlen_website]*) 
 : "The Great Reduction of 1680" (*with [Jonatan Riberth][jonatan_riberth_website]*)
 
-Popular Articles in Swedish
-: ["Bör mainstreamekonomin reformeras?"][bounadi2017], *Ekonomisk Debatt* 45 (3): 70--74, 2017. 
-: ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub], *Liberal Debatt* 2023 (6), 2023. 
-: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025.
-
 Pre-Doctoral Research 
-: ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies, Sweden,* EBA Working Paper, 2018.[^1]
+: ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies, Sweden,* EBA Working Paper, 2018[^1]
+
+Popular Articles in Swedish
+: ["Bör mainstreamekonomin reformeras?"][bounadi2017], *Ekonomisk Debatt* 45 (3): 70--74, 2017
+: ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub], *Liberal Debatt* 2023 (6), 2023
+: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025
 
 Citizen Science Projects in Swedish 
 : ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP1] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
