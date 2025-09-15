@@ -5,9 +5,9 @@ title: "Research"
 
 Work in Progress 
 : "Mecca's Tidal Pull: Inter-Ethnic Contact and Nationhood" 
-: "Female Teachers: The Roots of Women's Emancipation" (*with [Mattias Folkestad][mattias_folkestad_website]*) 
-: "Coffeehouses and the Rise of Science" (*with [Jens Oehlen][jens_oehlen_website]*) 
-: "The Great Reduction of 1680" (*with [Jonatan Riberth][jonatan_riberth_website]*)
+: "Female Teachers: The Roots of Women's Emancipation" (joint with [Mattias Folkestad][mattias_folkestad_website]) 
+: "Coffeehouses and the Rise of Science" (joint with [Jens Oehlen][jens_oehlen_website]) 
+: "The Great Reduction of 1680" (joint with [Jonatan Riberth][jonatan_riberth_website])
 
 Pre-Doctoral Research 
 : ["Weather and Conflicts in Afghanistan"][bounadi2018], *Expert Group for Aid Studies, Sweden,* EBA Working Paper, 2018[^1]
@@ -15,10 +15,10 @@ Pre-Doctoral Research
 Popular Articles in Swedish
 : ["Bör mainstreamekonomin reformeras?"][bounadi2017], *Ekonomisk Debatt* 45 (3): 70--74, 2017
 : ["De utmanade den manliga statsmaktens legitimitet"][bounadi2023_pub], *Liberal Debatt* 2023 (6), 2023
-: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025] (*with [Mattias Folkestad][mattias_folkestad_website]*), *Ekonomisk Debatt* 53 (3): 22--28, 2025
+: ["Lärarinnorna som banade väg för kvinnors frigörelse"][bounadi2025], *Ekonomisk Debatt* 53 (3): 22--28, 2025 (joint with [Mattias Folkestad][mattias_folkestad_website])
 
 Citizen Science Projects in Swedish 
-: ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP1] (*with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden]*)
+: ["I demokratins namnn – kvinnorna som krävde rösträtt"][FTP1] (joint with [Mattias Folkestad][mattias_folkestad_website] and the [National Archives of Sweden][national_archives_of_sweden])
 
 ---
 
