@@ -5,9 +5,9 @@ title: "Monir Bounadi"
 
 ## Bio
 
-I am a PhD candidate in Economics at the [IIES](https://www.su.se/institute-for-international-economic-studies/), Stockholm University.
+I am a PhD candidate in Economics at [IIES, Stockholm University](https://www.su.se/institute-for-international-economic-studies/). During 2024/25, I was a visiting scholar at the Department of Economics, University of Oxford.
 
-I study social change, class, and culture using tools from applied microeconomics and economic history. Most recently, I have been studying how coffeehouses shaped the rise of science in seventeenth-century London.
+I study economic development through the lens of social and cultural change, using tools from applied microeconomics and economic history. My current research examines how coffeehouses shaped the rise of science in seventeenth-century London.
 
 You can reach me at [monir.bounadi@iies.su.se][email].
 
