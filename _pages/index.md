@@ -5,11 +5,13 @@ title: "Monir Bounadi"
 
 ## Bio
 
-I am a PhD candidate at the [Institute for International Economic Studies](https://www.su.se/institute-for-international-economic-studies/) (IIES) at Stockholm University. I work on topics in historical economics at the intersection of development and political economics.
+I am a PhD candidate in Economics at the [IIES](https://www.su.se/institute-for-international-economic-studies/), Stockholm University.
 
-Feel free to contact me at [monir.bounadi@iies.su.se][email].
+I study social change, class, and culture using tools from applied microeconomics and economic history. Most recently, I have been studying how coffeehouses functioned as social institutions that shaped the rise of science in seventeenth-century London.
 
-Here is my [CV][cv].
+You can reach me at [monir.bounadi@iies.su.se][email].
+
+[CV][cv]
 
 [cv]: {{ site.url }}/monirbounadi/assets/BounadiCV.pdf
 [email]: mailto:monir.bounadi@iies.su.se
