@@ -11,7 +11,7 @@ I study economic development through the lens of social and cultural change, usi
 
 You can reach me at [monir.bounadi@iies.su.se][email].
 
-[CV][cv]
+Here is my [CV][cv].
 
 [cv]: {{ site.url }}/monirbounadi/assets/BounadiCV.pdf
 [email]: mailto:monir.bounadi@iies.su.se
