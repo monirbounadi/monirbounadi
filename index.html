@@ -1,4 +1,429 @@
----
-layout: home
-author_profile: true
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monir Bounadi | IIES</title>
+  <meta name="description" content="Monir Bounadi is a PhD Candidate in Economics at IIES, Stockholm University and will be on the 2026/27 academic job market.">
+  <meta name="author" content="Monir Bounadi">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://www.monirbounadi.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Monir Bounadi | IIES">
+  <meta property="og:description" content="PhD Candidate in Economics at IIES, Stockholm University; will be on the 2026/27 academic job market.">
+  <meta property="og:url" content="https://www.monirbounadi.com/">
+  <meta property="og:image" content="https://www.monirbounadi.com/assets/img/share-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Monir Bounadi, PhD Candidate in Economics — Academic Job Market 2026/27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Monir Bounadi | IIES">
+  <meta name="twitter:description" content="PhD Candidate in Economics at IIES, Stockholm University; will be on the 2026/27 academic job market.">
+  <meta name="twitter:image" content="https://www.monirbounadi.com/assets/img/share-card.jpg">
+  <meta name="twitter:image:alt" content="Monir Bounadi, PhD Candidate in Economics — Academic Job Market 2026/27">
+  <script>
+    window.getStockholmTheme = () => {
+      const hour = Number(new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/Stockholm',
+        hour: '2-digit',
+        hourCycle: 'h23'
+      }).format(new Date()));
+
+      return hour >= 19 || hour < 7 ? 'dark' : 'light';
+    };
+
+    window.getPreferredTheme = () => ({
+      theme: window.getStockholmTheme(),
+      mode: 'stockholm'
+    });
+
+    let initialTheme;
+    let initialThemeMode;
+
+    try {
+      const storedTheme = localStorage.getItem('monir-theme-preference');
+      if (storedTheme === 'dark' || storedTheme === 'light') {
+        initialTheme = storedTheme;
+        initialThemeMode = 'manual';
+      }
+    } catch (error) {
+      // Continue with the visitor's system preference.
+    }
+
+    if (!initialTheme) {
+      const preference = window.getPreferredTheme();
+      initialTheme = preference.theme;
+      initialThemeMode = preference.mode;
+    }
+
+    document.documentElement.dataset.theme = initialTheme;
+    document.documentElement.dataset.themeMode = initialThemeMode;
+  </script>
+  <link rel="preload" href="assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Monir Bounadi",
+      "jobTitle": "PhD Candidate in Economics",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "IIES, Stockholm University",
+        "url": "https://www.su.se/english/divisions/institute-for-international-economic-studies"
+      },
+      "url": "https://www.monirbounadi.com/",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=dFPVlswAAAAJ",
+        "https://github.com/monirbounadi",
+        "https://bsky.app/profile/monirbounadi.bsky.social",
+        "https://www.linkedin.com/in/monirbounadi/",
+        "https://x.com/MonirBounadi"
+      ]
+    }
+  </script>
+</head>
+<body id="top">
+  <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
+    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"></path>
+    </svg>
+    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="3.5"></circle>
+      <path d="M12 2.4v2M12 19.6v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.4 12h2M19.6 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+    </svg>
+  </button>
+
+  <nav class="section-nav" aria-label="Section navigation">
+    <a href="#job-market-paper"><span>01</span><span class="nav-separator" aria-hidden="true">/</span> Job Market Paper</a>
+    <a href="#working-papers"><span>02</span><span class="nav-separator" aria-hidden="true">/</span> Working Papers</a>
+    <a href="#work-in-progress"><span>03</span><span class="nav-separator" aria-hidden="true">/</span> Work in Progress</a>
+    <a href="#other-writing"><span>04</span><span class="nav-separator" aria-hidden="true">/</span> Other Writing</a>
+    <a href="#data"><span>05</span><span class="nav-separator" aria-hidden="true">/</span> Data</a>
+  </nav>
+  <div class="top-divider" aria-hidden="true">
+    <span class="top-divider-line"></span>
+    <span class="top-divider-mark"></span>
+    <span class="top-divider-line"></span>
+  </div>
+
+  <main class="site">
+    <aside class="sidebar">
+      <h1>Monir Bounadi</h1>
+
+      <picture class="portrait-frame">
+        <source srcset="assets/img/profile-photo.webp" type="image/webp">
+        <img class="portrait" src="assets/img/profile-photo.jpg" width="540" height="556" alt="Portrait of Monir Bounadi" decoding="async" fetchpriority="high">
+      </picture>
+
+      <p class="affiliation">
+        <strong>PhD Candidate in Economics</strong><br>
+        <a class="affiliation-place" href="https://www.su.se/english/divisions/institute-for-international-economic-studies">IIES, Stockholm University</a>
+      </p>
+
+      <p class="cv-link" id="cv"><a class="button download-link" href="assets/cv/BounadiCV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></p>
+
+      <p class="contact" id="contact">
+        <a href="mailto:monir.bounadi@iies.su.se"><strong>monir.bounadi@iies.su.se</strong></a>
+        <button class="email-copy" type="button" data-email="monir.bounadi@iies.su.se" aria-label="Copy email address" title="Copy email address"></button>
+        <span class="visually-hidden email-copy-status" aria-live="polite"></span>
+      </p>
+
+      <div class="social" aria-label="Profile links">
+        <a href="https://bsky.app/profile/monirbounadi.bsky.social" aria-label="Bluesky profile" title="Bluesky">
+          <svg class="icon icon-bsky" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 13.4c-.9-1.8-3.4-5.1-5.8-6.8C3.9 5 3 5.3 2.4 5.6 1.7 6 1.6 7.2 1.6 7.9c0 .7.4 5.4.7 6.2.9 2.8 4 3.7 6.7 3.4-4.8.7-9 2.5-3.4 8.7 6.2-6.4 6.4-3.4 6.4-7.5 0 4.1.2 1.1 6.4 7.5 5.6-6.2 1.4-8-3.4-8.7 2.7.3 5.8-.6 6.7-3.4.3-.8.7-5.5.7-6.2 0-.7-.1-1.9-.8-2.3-.6-.3-1.5-.6-3.8 1-2.4 1.7-4.9 5-5.8 6.8Z"></path>
+          </svg>
+        </a>
+        <a href="https://github.com/monirbounadi" aria-label="GitHub profile" title="GitHub">
+          <svg class="icon icon-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+          </svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=dFPVlswAAAAJ" aria-label="Google Scholar profile" title="Google Scholar">
+          <svg class="icon icon-scholar" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/monirbounadi/" aria-label="LinkedIn profile" title="LinkedIn">in</a>
+        <a href="https://x.com/MonirBounadi" aria-label="X profile" title="X">
+          <svg class="icon icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M18.9 2.9h3.3l-7.2 8.2 8.5 11h-6.6l-5.2-6.8-5.9 6.8H2.5l7.7-8.9L2.1 2.9h6.8l4.7 6.2 5.3-6.2Zm-1.2 17.3h1.8L7.9 4.7H6L17.7 20.2Z"></path>
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="bio" id="about">
+        <p>I am a <strong>PhD Candidate in Economics</strong> at <strong><a href="https://www.su.se/english/divisions/institute-for-international-economic-studies">IIES, Stockholm University</a></strong>.</p>
+        <p>My research lies at the intersection of <strong>economic history, political economy, and development economics</strong>. I study how historical institutions, social interactions, and cultural change shape long-run development, using tools from <strong>applied microeconomics</strong>.</p>
+        <p class="job-market"><strong>I will be on the 2026/27 academic job market.</strong></p>
+      </section>
+
+      <section class="research-section" id="job-market-paper">
+        <h2><span class="section-number">01</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Job Market Paper</span><a class="to-top" href="#top" aria-label="Back to top">↑</a></h2>
+
+        <article class="paper">
+          <h3 class="paper-title">Coffeehouses and the Rise of Science</h3>
+          <p class="paper-meta coauthors">with <a href="https://jensoehlen.github.io/">Jens Oehlen</a></p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-coffee">Abstract</button>
+            <span class="link-button is-pending" aria-disabled="true">Draft coming soon</span>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-coffee">Presentations</button>
+          </div>
+          <div class="abstract-panel" id="abstract-coffee" hidden>
+            <p>Can social institutions foster knowledge production by lowering the cost of learning from others? We study this question in seventeenth-century London, where coffeehouses served as public venues for exchanging ideas across social and occupational groups. Historians have long argued that coffeehouses fostered rational debate and helped Enlightenment ideas flourish. We test this claim for science. Using geocoded records and a staggered event study across London parishes, we find that the arrival of the first coffeehouse in a parish substantially and persistently increases the number of mathematical practitioners and scientific instrument shops. We argue that coffeehouses fostered this growth by making scientific knowledge easier to access and experimental science more interactive and public. Consistent with this mechanism, effects are larger among practitioners with weaker ties to Oxford and Cambridge, connections between theory-oriented scientists and practical instrument makers increase, and shops producing experimental instruments become more common.</p>
+          </div>
+          <div class="abstract-panel presentation-panel" id="presentations-coffee" hidden>
+            <dl class="presentation-list">
+              <div class="presentation-row">
+                <dt>2026</dt>
+                <dd>EAYE Annual Meeting, University of the Basque Country; IIES, Stockholm University; RIDGE Forum, University of the West Indies; SIOE Conference, INSEAD Fontainebleau; TSE; Uppsala Workshop in Economic History; Workshop on Growth, History and Development, University of Southern Denmark; Yale-UB HPE Workshop, University of Barcelona</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2025</dt>
+                <dd>SUDSWEC, Stockholm School of Economics</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2024</dt>
+                <dd>University of Oxford</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="research-section" id="working-papers">
+        <h2><span class="section-number">02</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Working Papers</span><a class="to-top" href="#top" aria-label="Back to top">↑</a></h2>
+
+        <article class="paper">
+          <h3 class="paper-title">Learning to Participate: The Effects of the First Female Teachers</h3>
+          <p class="paper-meta coauthors">with <a href="https://mattiasfolkestad.com/">Mattias Folkestad</a></p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-teachers">Abstract</button>
+            <span class="link-button is-pending" aria-disabled="true">Draft coming soon</span>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-teachers">Presentations</button>
+          </div>
+          <div class="abstract-panel" id="abstract-teachers" hidden>
+            <p>How does opening a profession to a previously excluded group shape the next generation? We study women’s entry into elementary-school teaching in Sweden after the 1859 reform that first allowed them to hold certified positions. Teaching rapidly feminized, and teachers became overrepresented among the female political elite. We link newly digitized teacher registers and school-district maps to full-count censuses and roughly 350,000 handwritten signatures from the 1913–14 women’s suffrage petition. Exploiting the staggered arrival of female teachers across school districts, we find that potentially exposed girls were more likely to participate politically and work in non-domestic occupations as adults. Exposed women were 23 percent more likely to sign the petition and, in 1910, 9 percent more likely to hold a non-domestic occupation. Spatial estimates using access to female teacher seminaries provide evidence linking female teachers to stronger local suffrage support.</p>
+          </div>
+          <div class="abstract-panel presentation-panel" id="presentations-teachers" hidden>
+            <dl class="presentation-list">
+              <div class="presentation-row">
+                <dt>2025</dt>
+                <dd>University of Gothenburg</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2024</dt>
+                <dd>Arthur Lewis Lab, University of Manchester; New Perspectives on Swedish Political History, Stockholm University; Summer 2024 IOG-BFI Conference; Swedish Conference in Economics, Lund University</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2023</dt>
+                <dd>ASWEDE Conference; Harvard University PE Tea; Institute of Urban History, Stockholm University; SUDSWEC, Uppsala University; Swedish Register-Based Research Summit</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="paper">
+          <h3 class="paper-title">Wealth Confiscation and Elite Persistence: Evidence from the Great Reduction</h3>
+          <p class="paper-meta coauthors">with <a href="https://www.jonatanriberth.com/">Jonatan Riberth</a></p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-reduction">Abstract</button>
+            <span class="link-button is-pending" aria-disabled="true">Draft coming soon</span>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-reduction">Presentations</button>
+          </div>
+          <div class="abstract-panel" id="abstract-reduction" hidden>
+            <p>Can wealth confiscation weaken elite persistence? This paper studies Sweden’s Great Reduction of 1680, the largest wealth redistribution in Swedish history, in which the Crown confiscated roughly half of noble estates. We link noble genealogies to landholdings from the sixteenth to twentieth centuries across Sweden, Finland, and parts of Russia. Using variation in exposure to confiscation, conditional on observables, we estimate the immediate and intergenerational effects of the Reduction on economic and social outcomes. The shock persistently reduced landed wealth: affected families owned substantially fewer manors than otherwise similar noble families across generations. Yet these losses did not meaningfully alter demographics, military careers, marriage patterns, or human capital. The results show that elite persistence did not rest on wealth alone: confiscation reduced landed wealth for generations, but left other markers of elite status largely unchanged.</p>
+          </div>
+          <div class="abstract-panel presentation-panel" id="presentations-reduction" hidden>
+            <dl class="presentation-list">
+              <div class="presentation-row">
+                <dt>2026</dt>
+                <dd>Economic Inequality and Political Institutions in the Nordic and Baltic Regions, c. 1400–1900, Uppsala University (scheduled); Zurich Workshop in AI &amp; Applied Economics (scheduled)</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2025</dt>
+                <dd>Danish HPE Workshop, University of Southern Denmark</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2024</dt>
+                <dd>SUDSWEC, Stockholm University</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="short-section" id="work-in-progress">
+        <h2><span class="section-number">03</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Work in Progress</span><a class="to-top" href="#top" aria-label="Back to top">↑</a></h2>
+
+        <article class="paper compact">
+          <h3 class="paper-title">Governing the Hajj: Colonial Mobility and Islamic Organization in the Dutch East Indies</h3>
+          <div class="links">
+            <span class="link-button is-pending" aria-disabled="true">Abstract coming soon</span>
+            <span class="link-button is-pending" aria-disabled="true">Draft coming soon</span>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-mecca">Presentations</button>
+          </div>
+          <div class="abstract-panel presentation-panel" id="presentations-mecca" hidden>
+            <dl class="presentation-list">
+              <div class="presentation-row">
+                <dt>2025</dt>
+                <dd>IIES, Stockholm University</dd>
+              </div>
+              <div class="presentation-row">
+                <dt>2021</dt>
+                <dd>Stockholm University</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+      </section>
+
+      <section id="other-writing">
+        <h2><span class="section-number">04</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Other Writing</span><a class="to-top" href="#top" aria-label="Back to top">↑</a></h2>
+
+        <article class="paper compact">
+          <h3 class="paper-title" lang="sv">Lärarinnorna som banade väg för kvinnors frigörelse</h3>
+          <p class="paper-meta"><span class="with-line">with <a href="https://mattiasfolkestad.com/">Mattias Folkestad</a></span> · <em>Ekonomisk Debatt</em> 53 (3): 22–28, 2025</p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="summary-female-teachers">English Summary</button>
+            <a class="download-link" href="assets/publications/bounadi2025.pdf" target="_blank" rel="noopener noreferrer">Article</a>
+          </div>
+          <div class="abstract-panel" id="summary-female-teachers" hidden>
+            <p>This Swedish-language article is a popular-audience adaptation of an early version of my current working paper, <em>Learning to Participate: The Effects of the First Female Teachers</em>, co-authored with Mattias Folkestad.</p>
+          </div>
+        </article>
+
+        <article class="paper compact">
+          <h3 class="paper-title" lang="sv">De utmanade den manliga statsmaktens legitimitet</h3>
+          <p class="paper-meta"><em>Liberal Debatt</em> 2023 (6), 2023</p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="summary-liberal-debatt">English Summary</button>
+            <a class="external-link" href="https://www.liberaldebatt.se/2023/12/de-utmanade-den-manliga-statsmaktens-legitimitet/" target="_blank" rel="noopener noreferrer">Article</a>
+          </div>
+          <div class="abstract-panel" id="summary-liberal-debatt" hidden>
+            <p>This Swedish-language article discusses the women’s suffrage movement in Sweden and its role in challenging the legitimacy of male political power. It emphasizes how suffrage activists built organizations, mobilized networks, and used petitions and public campaigns to make women’s political claims visible before formal enfranchisement.</p>
+          </div>
+        </article>
+
+        <article class="paper">
+          <h3 class="paper-title">Weather and Conflicts in Afghanistan</h3>
+          <p class="paper-meta"><em>Expert Group for Aid Studies, Sweden</em>, EBA Working Paper, June, 2018</p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-weather">Abstract</button>
+            <a class="download-link" href="assets/publications/bounadi2018.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-weather">Presentations</button>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="coverage-weather">Coverage</button>
+          </div>
+          <div class="abstract-panel" id="abstract-weather" hidden>
+            <p>I combine high-resolution data on temperature and precipitation with georeferenced data on conflict events to explore the link between local weather variations and conflict incidence for all districts of Afghanistan between July 2005 and December 2016. By utilizing exogenous interannual variation in daily temperature and precipitation within district-months, I find that exchanging colder for warmer days tends to increase the likelihood of conflict and that precipitation does not drive the occurrence of conflict. I provide suggestive evidence that temperature shocks to opium production do not explain the observed temperature-conflict link.</p>
+          </div>
+          <div class="abstract-panel presentation-panel" id="presentations-weather" hidden>
+            <dl class="presentation-list">
+              <div class="presentation-row">
+                <dt>2018</dt>
+                <dd>Expert Group for Aid Studies, Sweden</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="coverage-panel" id="coverage-weather" hidden>
+            <a class="coverage-card" href="https://www.sciencedirect.com/science/chapter/handbook/abs/pii/S2949836824000083" target="_blank" rel="noopener noreferrer" aria-label="Handbook of the Economics of Climate Change coverage of Weather and Conflicts in Afghanistan">
+              <picture>
+                <source srcset="assets/img/coverage-climate-conflict.webp" type="image/webp">
+                <img src="assets/img/coverage-climate-conflict.png" width="584" height="253" loading="lazy" decoding="async" alt="New evidence on the economics of climate and conflict">
+              </picture>
+            </a>
+          </div>
+        </article>
+
+        <article class="paper compact">
+          <h3 class="paper-title" lang="sv">Bör mainstreamekonomin reformeras?</h3>
+          <p class="paper-meta"><em>Ekonomisk Debatt</em> 45 (3): 70–74, 2017</p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="summary-ekonomisk-debatt-2017">English Summary</button>
+            <a class="download-link" href="assets/publications/bounadi2017.pdf" target="_blank" rel="noopener noreferrer">Article</a>
+          </div>
+          <div class="abstract-panel" id="summary-ekonomisk-debatt-2017" hidden>
+            <p>This Swedish-language review discusses an anthology on economic knowledge and the critique of mainstream economics after the global financial crisis. It evaluates the case for reforming economics, focusing especially on the relationship between mathematical modeling, empirical work, and heterodox approaches.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <section id="data">
+        <h2><span class="section-number">05</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Data</span><a class="to-top" href="#top" aria-label="Back to top">↑</a></h2>
+
+        <article class="paper">
+          <h3 class="paper-title">Swedish Women’s Suffrage Petitioners, 1913–14</h3>
+          <p class="paper-meta coauthors">with <a href="https://mattiasfolkestad.com/">Mattias Folkestad</a></p>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-suffrage-data">Description</button>
+            <a class="external-link" href="https://github.com/monirbounadi/petitioners" target="_blank" rel="noopener noreferrer">Data</a>
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="coverage-suffrage-data">Coverage</button>
+          </div>
+          <div class="abstract-panel" id="abstract-suffrage-data" hidden>
+            <p>This dataset contains raw and standardized transcriptions of all signatories to the nationwide Swedish women’s suffrage petition of 1913–14, including their names, titles, occupations, and addresses, together with geocoded information. Standardized transcriptions regularize spelling and capitalization across entries, for example by coding variant occupational spellings under a common form. The dataset covers roughly 19,000 petition lists and 351,000 signatures collected by the National Association for Women’s Suffrage in Sweden (<em lang="sv">Landsföreningen för kvinnans politiska rösträtt</em>) and submitted to parliament in 1914. The signatories represented about 18 percent of women over age 18 in Sweden at the time. The material was digitized through the citizen-science project <em lang="sv">I demokratins namn: kvinnorna som krävde rösträtt</em>, hosted on FromThePage, using scanned archival volumes from the National Archives of Sweden. The resulting data make the signatories searchable and linkable to individual-level historical records, enabling the study of women’s political mobilization before suffrage.</p>
+          </div>
+          <div class="coverage-panel coverage-slider drag-scroll" id="coverage-suffrage-data" role="region" tabindex="0" hidden aria-label="Coverage of the suffrage petition data">
+            <a class="coverage-card" href="https://www.svt.se/nyheter/lokalt/jamtland/internationella-kvinnodagen-uppmarksammas-i-ostersund" target="_blank" rel="noopener noreferrer" aria-label="Swedish Television coverage of the suffrage petition data">
+              <picture>
+                <source srcset="assets/img/coverage-data-svt.webp" type="image/webp">
+                <img src="assets/img/coverage-data-svt.png" width="584" height="427" loading="lazy" decoding="async" alt="Swedish Television coverage of the suffrage petition data">
+              </picture>
+              <span>Swedish Television</span>
+            </a>
+            <a class="coverage-card" href="https://www.sverigesradio.se/artikel/ullas-mamma-kampade-for-kvinnlig-rostratt-mannen-kastade-glapord-och-hanade-dem" target="_blank" rel="noopener noreferrer" aria-label="Swedish Radio coverage of the suffrage petition data">
+              <picture>
+                <source srcset="assets/img/coverage-data-sr.webp" type="image/webp">
+                <img src="assets/img/coverage-data-sr.png" width="584" height="567" loading="lazy" decoding="async" alt="Swedish Radio coverage of the suffrage petition data">
+              </picture>
+              <span>Swedish Radio</span>
+            </a>
+            <a class="coverage-card" href="https://www.rotter.se/senaste-nytt/3712-var-din-anmoder-demokratikampe-2" target="_blank" rel="noopener noreferrer" aria-label="Swedish Roots coverage of the suffrage petition data">
+              <picture>
+                <source srcset="assets/img/coverage-data-rotter.webp" type="image/webp">
+                <img src="assets/img/coverage-data-rotter.png" width="584" height="555" loading="lazy" decoding="async" alt="Swedish Roots coverage of the suffrage petition data">
+              </picture>
+              <span>Swedish Roots</span>
+            </a>
+            <a class="coverage-card" href="https://web.archive.org/web/20220927090542/https://www.sormlandsmuseum.se/program/transkribering/?occasion=2022-09-28%2015:00:00" target="_blank" rel="noopener noreferrer" aria-label="Sörmland Museum coverage of the suffrage petition data">
+              <picture>
+                <source srcset="assets/img/coverage-data-sormlands-museum.webp" type="image/webp">
+                <img src="assets/img/coverage-data-sormlands-museum.jpg" width="584" height="265" loading="lazy" decoding="async" alt="Sörmland Museum coverage of the suffrage petition data">
+              </picture>
+              <span>Sörmland Museum</span>
+            </a>
+            <a class="coverage-card" href="https://www.skaraborgslanstidning.se/skara/museet-bjuder-in-var-med-och-lyft-fram-kvinnorna-som-kravde-rostratt/" target="_blank" rel="noopener noreferrer" aria-label="Skaraborg County News coverage of the suffrage petition data">
+              <picture>
+                <source srcset="assets/img/coverage-data-skaraborg.webp" type="image/webp">
+                <img src="assets/img/coverage-data-skaraborg.png" width="584" height="422" loading="lazy" decoding="async" alt="Skaraborg County News coverage of the suffrage petition data">
+              </picture>
+              <span>Skaraborg County News</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="paper compact">
+          <h3 class="paper-title">Dutch East Indies Census and Administrative Boundaries, 1930</h3>
+          <div class="links">
+            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-dutch-east-indies-data">Description</button>
+            <a class="external-link" href="https://github.com/monirbounadi/volkstelling1930" target="_blank" rel="noopener noreferrer">Data</a>
+          </div>
+          <div class="abstract-panel" id="abstract-dutch-east-indies-data" hidden>
+            <p>This dataset harmonizes the 1930 Dutch East Indies census at the lowest administrative level and links 691 units to a historical boundary layer. It provides population counts by census category, a standardized administrative hierarchy, and stable identifiers for joining the tabular and spatial data.</p>
+          </div>
+        </article>
+      </section>
+
+    </section>
+  </main>
+  <footer class="site-footer">Last updated August 10, 2026</footer>
+</body>
+</html>
