@@ -237,7 +237,7 @@ html[data-theme="dark"] .top-divider-mark {
 
 .affiliation-place {
   color: var(--link);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .affiliation-place:hover {
@@ -441,12 +441,13 @@ h2::after {
 }
 
 h2 .section-number {
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
   margin-right: 6px;
 }
 
 h2 .section-separator {
-  color: color-mix(in srgb, var(--section-accent) 34%, var(--muted));
+  color: var(--muted);
   font-weight: 400;
   margin-right: 7px;
 }
