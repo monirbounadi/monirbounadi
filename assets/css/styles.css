@@ -269,9 +269,7 @@ html[data-theme="dark"] .top-divider-mark {
 }
 
 .cv-link .download-link::before {
-  width: 0.85em;
-  height: 0.85em;
-  margin-right: 0.45em;
+  display: none;
 }
 
 .cv-link .download-link:hover {
@@ -1268,6 +1266,13 @@ html[data-theme="dark"] .theme-icon-sun {
   }
 
   .meta-lines dd {
-    margin-bottom: 12px;
+    flex-direction: column;
+    gap: 1px;
+    margin-bottom: 14px;
+  }
+
+  .meta-lines dd > span:not(:last-child)::after {
+    content: none;
+    margin: 0;
   }
 }
