@@ -163,9 +163,13 @@ strong {
   height: 1px;
   flex: 1 1 auto;
   max-width: 153px;
-  background: color-mix(in srgb, var(--divider-line) 80%, var(--bg));
+  background: linear-gradient(to right, transparent, color-mix(in srgb, var(--divider-line) 88%, var(--bg)));
   opacity: 0;
   transform: scaleX(0);
+}
+
+.top-divider-line:last-child {
+  background: linear-gradient(to left, transparent, color-mix(in srgb, var(--divider-line) 88%, var(--bg)));
 }
 
 .top-divider-line:first-child {
@@ -878,7 +882,11 @@ p {
   }
 
   .top-divider-line {
-    background: var(--divider-line);
+    background: linear-gradient(to right, transparent, var(--divider-line));
+  }
+
+  .top-divider-line:last-child {
+    background: linear-gradient(to left, transparent, var(--divider-line));
   }
 
   .coverage-card {
