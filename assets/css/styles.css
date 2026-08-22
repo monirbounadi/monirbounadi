@@ -152,7 +152,7 @@ strong {
 
 .top-divider {
   width: var(--sidebar-width);
-  margin: 6px auto 0;
+  margin: 32px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -984,7 +984,7 @@ html[data-theme="dark"] .theme-icon-sun {
 
   .top-divider {
     width: min(310px, calc(100% - 86px));
-    margin-top: 14px;
+    margin-top: 32px;
   }
 
   .site {
