@@ -1260,43 +1260,6 @@ html[data-theme="dark"] .theme-icon-sun {
 }
 
 @media (max-width: 900px) {
-  /* Let the sidebar's children join the page column so research can sit higher */
-  .site {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sidebar {
-    display: contents;
-  }
-
-  .sidebar h1 { order: 1; }
-  .portrait-frame { order: 2; }
-  .affiliation { order: 3; }
-  .cv-link { order: 4; }
-  .content { order: 5; width: 100%; }
-  .contact { order: 6; }
-  .social { order: 7; }
-
-  /* display:contents drops the sidebar's own centring */
-  .sidebar h1,
-  .portrait-frame,
-  .affiliation,
-  .cv-link,
-  .contact,
-  .social {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .sidebar h1 { margin-bottom: 12px; }
-  .portrait-frame { width: 165px; margin-bottom: 14px; }
-  .affiliation { margin-bottom: 14px; }
-  .cv-link { margin-bottom: 26px; }
-  .content > .bio { margin-bottom: 30px; }
-  .contact { margin: 40px auto 14px; }
-  .social { margin-bottom: 0; }
-
   .meta-lines {
     grid-template-columns: 1fr;
     gap: 4px 0;
