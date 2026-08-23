@@ -1064,6 +1064,16 @@ html[data-theme="dark"] .theme-icon-sun {
     font-size: 11pt;
   }
 
+  .top-divider,
+  .theme-toggle,
+  .social,
+  .email-copy,
+  .coverage-panel,
+  .links button,
+  .link-button.is-pending {
+    display: none !important;
+  }
+
   .site {
     display: block;
     width: auto;
