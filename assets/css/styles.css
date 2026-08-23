@@ -187,6 +187,7 @@ html[data-theme="dark"] .top-divider-mark {
 .affiliation {
   width: var(--sidebar-width);
   font-size: 16px;
+  font-style: italic;
   line-height: 1.6;
   margin: 0 0 22px;
   padding: 0 4px;
@@ -195,16 +196,12 @@ html[data-theme="dark"] .top-divider-mark {
 
 .affiliation-place {
   color: var(--link);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .affiliation-place:hover {
   color: var(--link-hover);
   opacity: 0.9;
-}
-
-.affiliation strong {
-  font-weight: 600;
 }
 
 .cv-link {
