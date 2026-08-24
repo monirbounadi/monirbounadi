@@ -89,6 +89,7 @@ document.querySelectorAll('.drag-scroll').forEach((slider) => {
 });
 
 const themeToggle = document.querySelector('.theme-toggle');
+let themeShiftTimer;
 const root = document.documentElement;
 
 function updateThemeControl(theme) {
@@ -113,6 +114,11 @@ themeToggle.addEventListener('click', () => {
   themeToggle.classList.remove('spin');
   void themeToggle.offsetWidth;
   themeToggle.classList.add('spin');
+
+  // Let the colours cascade in rather than snapping over at once.
+  root.classList.add('theme-shift');
+  window.clearTimeout(themeShiftTimer);
+  themeShiftTimer = window.setTimeout(() => root.classList.remove('theme-shift'), 700);
 
   try {
     localStorage.setItem('monir-theme-preference', theme);

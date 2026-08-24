@@ -874,6 +874,61 @@ p {
   transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
 }
 
+/* Staggered colour cascade while the theme flips. Scoped to .theme-shift so
+   ordinary hover transitions stay quick. */
+html.theme-shift body {
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 400ms cubic-bezier(0.4, 0, 0.2, 1) 60ms;
+}
+
+html.theme-shift .sidebar h1,
+html.theme-shift .affiliation,
+html.theme-shift .bio p,
+html.theme-shift .paper-title,
+html.theme-shift .paper-meta,
+html.theme-shift .abstract-panel,
+html.theme-shift .presentation-list,
+html.theme-shift .meta-lines dt,
+html.theme-shift .meta-lines dd,
+html.theme-shift .site-footer {
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 80ms;
+}
+
+html.theme-shift .theme-toggle {
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+              border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+}
+
+html.theme-shift .theme-icon {
+  transition: stroke 300ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+}
+
+html.theme-shift h2 {
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 120ms;
+}
+
+html.theme-shift h2::after,
+html.theme-shift .top-divider-line {
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 120ms;
+}
+
+html.theme-shift a {
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 160ms;
+}
+
+html.theme-shift .links a,
+html.theme-shift .link-button,
+html.theme-shift .cv-link .download-link {
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms,
+              border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms,
+              color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms;
+}
+
+html.theme-shift .coverage-card,
+html.theme-shift .coverage-card span {
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+}
+
 .theme-toggle.spin {
   animation: theme-spin 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1045,6 +1100,11 @@ html[data-theme="dark"] .theme-icon-sun {
   .top-divider-mark,
   .theme-toggle.spin {
     animation: none;
+  }
+
+  html.theme-shift *,
+  html.theme-shift *::after {
+    transition: none !important;
   }
 
   .top-divider-line {
