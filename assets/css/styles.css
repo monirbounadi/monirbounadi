@@ -73,6 +73,7 @@ html[data-theme="dark"] {
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scrollbar-color: color-mix(in srgb, var(--muted) 45%, var(--bg)) var(--bg);
 }
 
 body {
@@ -137,20 +138,43 @@ strong {
 }
 
 .top-divider-mark {
+  position: relative;
   width: 22px;
   height: 19px;
   flex: 0 0 auto;
-  background-image: url("../img/coffee-cup-mark.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   opacity: 0;
   transform: scale(0.8);
   animation: top-divider-mark 420ms cubic-bezier(0.34, 1.56, 0.64, 1) 550ms forwards;
 }
 
-html[data-theme="dark"] .top-divider-mark {
+/* Two stacked layers so the mark crossfades between themes
+   rather than swapping the image on one frame. */
+.top-divider-mark::before,
+.top-divider-mark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.top-divider-mark::before {
+  background-image: url("../img/coffee-cup-mark.png");
+  opacity: 1;
+}
+
+.top-divider-mark::after {
   background-image: url("../img/coffee-cup-mark-dark.png");
+  opacity: 0;
+}
+
+html[data-theme="dark"] .top-divider-mark::before {
+  opacity: 0;
+}
+
+html[data-theme="dark"] .top-divider-mark::after {
+  opacity: 1;
 }
 
 .sidebar {
@@ -877,11 +901,12 @@ p {
 /* Colour cascade while the theme flips. Every element gets the same set of
    transitionable properties, then groups differ only by delay, so nothing
    snaps while the rest fades. Scoped to .theme-shift so hovers stay quick. */
+html.theme-shift,
 html.theme-shift *,
 html.theme-shift *::before,
 html.theme-shift *::after {
-  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity;
-  transition-duration: 500ms, 400ms, 400ms, 400ms, 400ms, 400ms, 400ms;
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity, scrollbar-color;
+  transition-duration: 500ms, 400ms, 400ms, 400ms, 400ms, 400ms, 400ms, 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
 }
@@ -1104,6 +1129,7 @@ html[data-theme="dark"] .theme-icon-sun {
   }
 
   html.theme-shift *,
+  html.theme-shift *::before,
   html.theme-shift *::after {
     transition: none !important;
   }
