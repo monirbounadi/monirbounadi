@@ -109,6 +109,11 @@ themeToggle.addEventListener('click', () => {
   const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
   applyTheme(theme, 'manual');
 
+  // Restart the spin even when the button is clicked repeatedly.
+  themeToggle.classList.remove('spin');
+  void themeToggle.offsetWidth;
+  themeToggle.classList.add('spin');
+
   try {
     localStorage.setItem('monir-theme-preference', theme);
   } catch (error) {
@@ -116,10 +121,10 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
-function followStockholmTheme() {
+function followLocalTheme() {
   if (root.dataset.themeMode === 'manual') return;
   const preference = window.getPreferredTheme();
   applyTheme(preference.theme, preference.mode);
 }
 
-window.setInterval(followStockholmTheme, 60_000);
+window.setInterval(followLocalTheme, 60_000);

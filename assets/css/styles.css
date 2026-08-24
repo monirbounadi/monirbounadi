@@ -194,16 +194,6 @@ html[data-theme="dark"] .top-divider-mark {
   text-align: center;
 }
 
-.affiliation-place {
-  color: var(--link);
-  font-weight: 400;
-}
-
-.affiliation-place:hover {
-  color: var(--link-hover);
-  opacity: 0.9;
-}
-
 .cv-link {
   width: var(--sidebar-width);
   margin: 0 0 18px;
@@ -787,6 +777,20 @@ p {
   }
 }
 
+@keyframes theme-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  40% {
+    transform: rotate(200deg) scale(0.85);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 @keyframes top-divider-mark {
   to {
     opacity: 1;
@@ -868,6 +872,10 @@ p {
   align-items: center;
   justify-content: center;
   transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+.theme-toggle.spin {
+  animation: theme-spin 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-toggle:hover,
@@ -1034,7 +1042,8 @@ html[data-theme="dark"] .theme-icon-sun {
   .abstract-panel:not([hidden]),
   .coverage-panel:not([hidden]),
   .top-divider-line,
-  .top-divider-mark {
+  .top-divider-mark,
+  .theme-toggle.spin {
     animation: none;
   }
 
