@@ -874,11 +874,16 @@ p {
   transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
 }
 
-/* Staggered colour cascade while the theme flips. Scoped to .theme-shift so
-   ordinary hover transitions stay quick. */
-html.theme-shift body {
-  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
-              color 400ms cubic-bezier(0.4, 0, 0.2, 1) 60ms;
+/* Colour cascade while the theme flips. Every element gets the same set of
+   transitionable properties, then groups differ only by delay, so nothing
+   snaps while the rest fades. Scoped to .theme-shift so hovers stay quick. */
+html.theme-shift *,
+html.theme-shift *::before,
+html.theme-shift *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity;
+  transition-duration: 500ms, 400ms, 400ms, 400ms, 400ms, 400ms, 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
 }
 
 html.theme-shift .sidebar h1,
@@ -887,46 +892,42 @@ html.theme-shift .bio p,
 html.theme-shift .paper-title,
 html.theme-shift .paper-meta,
 html.theme-shift .abstract-panel,
+html.theme-shift .abstract-panel p,
 html.theme-shift .presentation-list,
 html.theme-shift .meta-lines dt,
 html.theme-shift .meta-lines dd,
 html.theme-shift .site-footer {
-  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 80ms;
+  transition-delay: 80ms;
 }
 
-html.theme-shift .theme-toggle {
-  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
-              border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
-}
-
+html.theme-shift .theme-toggle,
 html.theme-shift .theme-icon {
-  transition: stroke 300ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+  transition-delay: 100ms;
 }
 
-html.theme-shift h2 {
-  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 120ms;
+html.theme-shift .job-market {
+  transition-delay: 110ms;
 }
 
+html.theme-shift h2,
 html.theme-shift h2::after,
 html.theme-shift .top-divider-line {
-  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 120ms;
+  transition-delay: 120ms;
 }
 
 html.theme-shift a {
-  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1) 160ms;
+  transition-delay: 160ms;
 }
 
 html.theme-shift .links a,
 html.theme-shift .link-button,
 html.theme-shift .cv-link .download-link {
-  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms,
-              border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms,
-              color 400ms cubic-bezier(0.4, 0, 0.2, 1) 180ms;
+  transition-delay: 180ms;
 }
 
 html.theme-shift .coverage-card,
 html.theme-shift .coverage-card span {
-  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+  transition-delay: 200ms;
 }
 
 .theme-toggle.spin {
