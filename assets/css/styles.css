@@ -673,6 +673,37 @@ p {
   hyphens: none;
 }
 
+/* ---- Job market paper plate --------------------------------------------- */
+
+.paper-plate {
+  margin: 14px 0 16px;
+  max-width: 460px;
+}
+
+.paper-plate picture {
+  display: block;
+}
+
+.paper-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+html[data-theme="dark"] .paper-plate img {
+  filter: brightness(0.9) saturate(0.95);
+}
+
+.paper-plate figcaption {
+  margin-top: 7px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .coverage-panel {
   margin: 12px 0 0;
   display: flex;
@@ -926,7 +957,16 @@ html.theme-shift .teaching-group .teaching-where,
 html.theme-shift .teaching-year,
 html.theme-shift .teaching-course,
 html.theme-shift .teaching-note,
+html.theme-shift .paper-plate figcaption,
 html.theme-shift .site-footer {
+  transition-delay: 80ms;
+}
+
+/* The plate is dimmed in dark mode, and `filter` is not in the shared
+   property list above, so it needs its own transition or it would snap. */
+html.theme-shift .paper-plate img {
+  transition-property: filter, border-color;
+  transition-duration: 400ms;
   transition-delay: 80ms;
 }
 
