@@ -30,10 +30,23 @@
       return hour >= 19 || hour < 7 ? 'dark' : 'light';
     };
 
-    window.getPreferredTheme = () => ({
-      theme: window.getLocalTheme(),
-      mode: 'auto'
-    });
+    // An OS-level colour scheme is an explicit choice, so it wins. The
+    // time-of-day guess only applies when the visitor has expressed none.
+    window.getPreferredTheme = () => {
+      try {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return { theme: 'dark', mode: 'system' };
+        }
+
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          return { theme: 'light', mode: 'system' };
+        }
+      } catch (error) {
+        // Fall through to the local-time default.
+      }
+
+      return { theme: window.getLocalTheme(), mode: 'auto' };
+    };
 
     let initialTheme;
     let initialThemeMode;
@@ -58,7 +71,7 @@
     document.documentElement.dataset.themeMode = initialThemeMode;
   </script>
   <link rel="preload" href="assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=26">
+  <link rel="stylesheet" href="assets/css/styles.css?v=27">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="assets/js/main.js" defer></script>
   <script type="application/ld+json">

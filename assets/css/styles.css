@@ -688,7 +688,6 @@ p {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--border);
   border-radius: 2px;
 }
 
@@ -965,7 +964,7 @@ html.theme-shift .site-footer {
 /* The plate is dimmed in dark mode, and `filter` is not in the shared
    property list above, so it needs its own transition or it would snap. */
 html.theme-shift .paper-plate img {
-  transition-property: filter, border-color;
+  transition-property: filter;
   transition-duration: 400ms;
   transition-delay: 80ms;
 }
