@@ -985,6 +985,75 @@ html[data-theme="dark"] .theme-icon-sun {
   display: block;
 }
 
+/* ---- Teaching ---------------------------------------------------------- */
+
+.teaching-group {
+  margin-bottom: 26px;
+}
+
+.teaching-group:last-child {
+  margin-bottom: 0;
+}
+
+.teaching-group h3 {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: baseline;
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+
+.teaching-group .teaching-level {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.teaching-group .teaching-where {
+  color: var(--muted);
+  font-size: 15.5px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.teaching-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.teaching-group li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 14px;
+  margin-bottom: 5px;
+}
+
+.teaching-group li:last-child {
+  margin-bottom: 0;
+}
+
+.teaching-year {
+  color: var(--muted);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.teaching-course {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.teaching-note {
+  color: var(--muted);
+  font-size: 15.5px;
+  font-style: italic;
+}
+
 /* Keep the research column comfortably readable before switching to one column. */
 @media (max-width: 900px) {
   .top-divider {
@@ -1041,6 +1110,20 @@ html[data-theme="dark"] .theme-icon-sun {
 }
 
 @media (max-width: 480px) {
+  .teaching-group h3 {
+    display: block;
+  }
+
+  .teaching-group .teaching-where {
+    display: block;
+    margin-top: 2px;
+  }
+
+  .teaching-group li {
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
   .top-divider {
     width: min(250px, calc(100% - 70px));
     gap: 9px;
