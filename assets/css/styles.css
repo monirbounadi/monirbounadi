@@ -1334,6 +1334,11 @@ html[data-theme="dark"] .theme-icon-sun {
     display: block !important;
   }
 
+  .paper-plate {
+    max-width: 200px;
+    break-inside: avoid;
+  }
+
   .abstract-panel {
     border-left-color: #777;
   }
