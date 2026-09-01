@@ -15,6 +15,8 @@ document.querySelectorAll('.email-copy').forEach((button) => {
     const email = button.dataset.email;
     const status = button.parentElement.querySelector('.email-copy-status');
 
+    let copied = true;
+
     try {
       await navigator.clipboard.writeText(email);
     } catch (error) {
@@ -25,9 +27,12 @@ document.querySelectorAll('.email-copy').forEach((button) => {
       textarea.style.opacity = '0';
       document.body.appendChild(textarea);
       textarea.select();
-      document.execCommand('copy');
+      copied = document.execCommand('copy');
       textarea.remove();
     }
+
+    // Don't announce a copy that did not happen; the mailto link sits right beside.
+    if (!copied) return;
 
     button.classList.add('copied');
     status.textContent = 'Email address copied';

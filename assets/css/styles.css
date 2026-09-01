@@ -1159,6 +1159,11 @@ html[data-theme="dark"] .theme-icon-sun {
 }
 
 @media (max-width: 480px) {
+  /* Justifying without hyphenation opens 7x word gaps at this width. */
+  .abstract-panel:not(.presentation-panel) p {
+    text-align: left;
+  }
+
   .teaching-group h3 {
     display: block;
   }
@@ -1355,9 +1360,19 @@ html[data-theme="dark"] .theme-icon-sun {
     max-width: none;
   }
 
+  /* Sections are page-sized, so avoiding breaks inside them only pushed them
+     forward and left the first page mostly blank. Protect entries instead. */
   .content > section {
-    break-inside: avoid;
+    break-inside: auto;
     margin-bottom: 34px;
+  }
+
+  .paper {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
   }
 
   .abstract-panel[hidden] {
