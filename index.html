@@ -71,9 +71,10 @@
     document.documentElement.dataset.themeMode = initialThemeMode;
   </script>
   <link rel="preload" href="assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=27">
+  <link rel="stylesheet" href="assets/css/styles.css?v=28">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script src="assets/js/main.js?v=28" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -97,7 +98,7 @@
   </script>
 </head>
 <body id="top">
-  <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
+  <button class="theme-toggle" type="button" aria-label="Switch to night mode">
     <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"></path>
     </svg>
@@ -130,7 +131,7 @@
         <span class="visually-hidden email-copy-status" aria-live="polite"></span>
       </p>
 
-      <div class="social" aria-label="Profile links">
+      <div class="social" role="group" aria-label="Profile links">
         <a href="https://bsky.app/profile/monirbounadi.bsky.social" aria-label="Bluesky profile" title="Bluesky">
           <svg class="icon icon-bsky" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path fill="currentColor" d="M12 13.4c-.9-1.8-3.4-5.1-5.8-6.8C3.9 5 3 5.3 2.4 5.6 1.7 6 1.6 7.2 1.6 7.9c0 .7.4 5.4.7 6.2.9 2.8 4 3.7 6.7 3.4-4.8.7-9 2.5-3.4 8.7 6.2-6.4 6.4-3.4 6.4-7.5 0 4.1.2 1.1 6.4 7.5 5.6-6.2 1.4-8-3.4-8.7 2.7.3 5.8-.6 6.7-3.4.3-.8.7-5.5.7-6.2 0-.7-.1-1.9-.8-2.3-.6-.3-1.5-.6-3.8 1-2.4 1.7-4.9 5-5.8 6.8Z"></path>
@@ -165,7 +166,7 @@
       </div>
     </aside>
 
-    <section class="content">
+    <div class="content">
       <section class="bio" id="about">
         <h2><span class="section-number">01</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">About</span></h2>
         <p>I am a PhD Candidate in Economics at <a href="https://www.su.se/english/divisions/institute-for-international-economic-studies">IIES, Stockholm University</a>. My research lies at the intersection of economic history, political economy, and economic development. I study how institutions, social interactions, and knowledge diffusion shape long-run development. I build novel datasets by digitizing archival and library collections at scale, and analyze them with applied microeconometric methods.</p>
@@ -199,7 +200,7 @@
             <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-coffee">Presentations</button>
           </div>
           <div class="abstract-panel" id="abstract-coffee">
-            <p>Can social venues raise knowledge production by lowering the cost of learning from others? Historians have long credited coffeehouses, commercial venues where strangers met across social ranks, with fostering scientific activity during the Scientific Revolution. We test this claim in seventeenth-century London. Using geocoded records and a staggered event study across parishes, we find a persistent increase in mathematical practitioners and scientific instrument shops following a parish's first coffeehouse. Effects are concentrated among practitioners with weak ties to Oxford and Cambridge, connections between theorists and applied makers increase, and new shops turn toward experimental instruments. We argue that coffeehouses fostered this growth by lowering the cost of accessing scientific knowledge for those outside academic networks and by making experimental science interactive and public. These findings show that social venues can foster knowledge production outside formal academic networks.</p>
+            <p>Can social venues raise knowledge production by lowering the cost of learning from others? Historians have long credited coffeehouses, commercial venues where strangers met across social ranks, with fostering scientific activity during the Scientific Revolution. We test this claim in seventeenth-century London. Using geocoded records and a staggered event study across parishes, we find a persistent increase in mathematical practitioners and scientific instrument shops following a parish’s first coffeehouse. Effects are concentrated among practitioners with weak ties to Oxford and Cambridge, connections between theorists and applied makers increase, and new shops turn toward experimental instruments. We argue that coffeehouses fostered this growth by lowering the cost of accessing scientific knowledge for those outside academic networks and by making experimental science interactive and public. These findings show that social venues can foster knowledge production outside formal academic networks.</p>
           </div>
           <div class="abstract-panel presentation-panel" id="presentations-coffee" hidden>
             <dl class="presentation-list">
@@ -268,7 +269,7 @@
             <dl class="presentation-list">
               <div class="presentation-row">
                 <dt>2026</dt>
-                <dd>Economic Inequality and Political Institutions in the Nordic and Baltic Regions, c. 1400–1900, Uppsala University (scheduled); Workshop on Wealth Inequality, Intergenerational Mobility, and Equality of Opportunity, WU Wien (scheduled); Zurich Workshop in AI &amp; Applied Economics (scheduled)</dd>
+                <dd>Economic Inequality and Political Institutions in the Nordic and Baltic Regions, c.&nbsp;1400–1900, Uppsala University (scheduled); Workshop on Wealth Inequality, Intergenerational Mobility, and Equality of Opportunity, WU Wien (scheduled); Zurich Workshop in AI &amp; Applied Economics (scheduled)</dd>
               </div>
               <div class="presentation-row">
                 <dt>2025</dt>
@@ -399,35 +400,35 @@
             <a class="coverage-card" href="https://www.svt.se/nyheter/lokalt/jamtland/internationella-kvinnodagen-uppmarksammas-i-ostersund" target="_blank" rel="noopener noreferrer" aria-label="Swedish Television coverage of the suffrage petition data">
               <picture>
                 <source srcset="assets/img/coverage-data-svt.webp" type="image/webp">
-                <img src="assets/img/coverage-data-svt.png" width="584" height="427" loading="lazy" decoding="async" alt="Swedish Television coverage of the suffrage petition data">
+                <img src="assets/img/coverage-data-svt.png" width="584" height="427" loading="lazy" decoding="async" alt="">
               </picture>
               <span>Swedish Television</span>
             </a>
             <a class="coverage-card" href="https://www.sverigesradio.se/artikel/ullas-mamma-kampade-for-kvinnlig-rostratt-mannen-kastade-glapord-och-hanade-dem" target="_blank" rel="noopener noreferrer" aria-label="Swedish Radio coverage of the suffrage petition data">
               <picture>
                 <source srcset="assets/img/coverage-data-sr.webp" type="image/webp">
-                <img src="assets/img/coverage-data-sr.png" width="584" height="567" loading="lazy" decoding="async" alt="Swedish Radio coverage of the suffrage petition data">
+                <img src="assets/img/coverage-data-sr.png" width="584" height="567" loading="lazy" decoding="async" alt="">
               </picture>
               <span>Swedish Radio</span>
             </a>
             <a class="coverage-card" href="https://www.rotter.se/senaste-nytt/3712-var-din-anmoder-demokratikampe-2" target="_blank" rel="noopener noreferrer" aria-label="Swedish Roots coverage of the suffrage petition data">
               <picture>
                 <source srcset="assets/img/coverage-data-rotter.webp" type="image/webp">
-                <img src="assets/img/coverage-data-rotter.png" width="584" height="555" loading="lazy" decoding="async" alt="Swedish Roots coverage of the suffrage petition data">
+                <img src="assets/img/coverage-data-rotter.png" width="584" height="555" loading="lazy" decoding="async" alt="">
               </picture>
               <span>Swedish Roots</span>
             </a>
             <a class="coverage-card" href="https://web.archive.org/web/20220927090542/https://www.sormlandsmuseum.se/program/transkribering/?occasion=2022-09-28%2015:00:00" target="_blank" rel="noopener noreferrer" aria-label="Sörmland Museum coverage of the suffrage petition data">
               <picture>
                 <source srcset="assets/img/coverage-data-sormlands-museum.webp" type="image/webp">
-                <img src="assets/img/coverage-data-sormlands-museum.jpg" width="584" height="265" loading="lazy" decoding="async" alt="Sörmland Museum coverage of the suffrage petition data">
+                <img src="assets/img/coverage-data-sormlands-museum.jpg" width="584" height="265" loading="lazy" decoding="async" alt="">
               </picture>
               <span>Sörmland Museum</span>
             </a>
             <a class="coverage-card" href="https://www.skaraborgslanstidning.se/skara/museet-bjuder-in-var-med-och-lyft-fram-kvinnorna-som-kravde-rostratt/" target="_blank" rel="noopener noreferrer" aria-label="Skaraborg County News coverage of the suffrage petition data">
               <picture>
                 <source srcset="assets/img/coverage-data-skaraborg.webp" type="image/webp">
-                <img src="assets/img/coverage-data-skaraborg.png" width="584" height="422" loading="lazy" decoding="async" alt="Skaraborg County News coverage of the suffrage petition data">
+                <img src="assets/img/coverage-data-skaraborg.png" width="584" height="422" loading="lazy" decoding="async" alt="">
               </picture>
               <span>Skaraborg County News</span>
             </a>
@@ -474,7 +475,7 @@
         </div>
       </section>
 
-    </section>
+    </div>
   </main>
   <footer class="site-footer">Last updated August 31, 2026</footer>
 </body>

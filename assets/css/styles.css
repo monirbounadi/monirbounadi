@@ -48,6 +48,8 @@
   --surface: #ffffff;
   --theme-ring: #c78e4e;
   --section-accent: #a11833;
+  --focus-ring: #2f6ea9;
+  color-scheme: light;
 }
 
 html[data-theme="dark"] {
@@ -63,6 +65,7 @@ html[data-theme="dark"] {
   --surface: #1d2430;
   --theme-ring: #d6a05d;
   --section-accent: #e0a1ad;
+  --focus-ring: #b7d8f4;
   color-scheme: dark;
 }
 
@@ -205,7 +208,7 @@ html[data-theme="dark"] .top-divider-mark::after {
   height: auto;
   display: block;
   border-radius: 10px;
-  background: #eeeeee;
+  background: var(--border);
 }
 
 .affiliation {
@@ -317,7 +320,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--link-hover);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
   border-radius: 2px;
   text-decoration: none;
@@ -440,9 +443,6 @@ h2 .section-separator {
   margin-bottom: 60px;
 }
 
-.content > section.short-section {
-  margin-bottom: 60px;
-}
 
 p {
   font-size: 18px;
@@ -560,7 +560,7 @@ p {
 .link-button.is-pending:hover {
   border-color: color-mix(in srgb, var(--muted) 50%, var(--border));
   background: transparent;
-  color: color-mix(in srgb, var(--muted) 78%, var(--bg));
+  color: var(--muted);
   cursor: default;
 }
 
@@ -570,7 +570,7 @@ p {
 .social a:focus-visible,
 .contact a:focus-visible,
 .email-copy:focus-visible {
-  outline: 2px solid var(--link-hover);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -605,8 +605,7 @@ p {
   opacity: 1;
 }
 
-.paper-meta,
-.paper-venue {
+.paper-meta {
   font-size: 14.5px;
   line-height: 1.65;
   margin: 0 0 5px;
@@ -729,7 +728,7 @@ html[data-theme="dark"] .paper-plate img {
 }
 
 .coverage-card:focus-visible {
-  outline: 2px solid var(--link-hover);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -750,7 +749,8 @@ html[data-theme="dark"] .paper-plate img {
   overflow-x: auto;
   overscroll-behavior-x: contain;
   touch-action: pan-y;
-  padding: 1px 2px 12px;
+  margin-top: 7px;
+  padding: 6px 6px 12px;
   scroll-snap-type: x mandatory;
   scrollbar-color: color-mix(in srgb, var(--link) 42%, var(--border)) transparent;
   scrollbar-width: thin;
@@ -764,7 +764,7 @@ html[data-theme="dark"] .paper-plate img {
 }
 
 .coverage-slider:focus-visible {
-  outline: 2px solid var(--link-hover);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -853,7 +853,7 @@ html[data-theme="dark"] .paper-plate img {
 }
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
   ::selection {
-    background: #d7e6f4;
+    background: var(--link-light);
   }
 
   .top-divider-line {
@@ -897,14 +897,13 @@ html[data-theme="dark"] .paper-plate img {
     color: var(--muted);
   }
 
-  .paper-venue,
   p {
     color: var(--text);
   }
 
   .theme-toggle:hover,
   .theme-toggle:focus-visible {
-    box-shadow: 0 0 0 2px rgba(199, 142, 78, 0.58);
+    box-shadow: 0 0 0 2px var(--theme-ring);
   }
 }
 
@@ -949,6 +948,7 @@ html.theme-shift .paper-meta,
 html.theme-shift .abstract-panel,
 html.theme-shift .abstract-panel p,
 html.theme-shift .presentation-list,
+html.theme-shift .presentation-row dt,
 html.theme-shift .meta-lines dt,
 html.theme-shift .meta-lines dd,
 html.theme-shift .teaching-group .teaching-level,
@@ -1007,7 +1007,13 @@ html.theme-shift .coverage-card span {
 .theme-toggle:focus-visible {
   border-color: var(--theme-ring);
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--theme-ring) 58%, transparent);
-  outline: none;
+}
+
+/* The gold ring is only 1.73:1 on the light background, and box-shadow is not
+   painted in forced-colors mode, so focus needs a real outline of its own. */
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .theme-icon {
@@ -1135,8 +1141,7 @@ html[data-theme="dark"] .theme-icon-sun {
     right: 14px;
   }
 
-  .paper-meta,
-  .paper-venue {
+  .paper-meta {
     font-size: 14.5px;
   }
 
@@ -1203,9 +1208,6 @@ html[data-theme="dark"] .theme-icon-sun {
     margin-bottom: 52px;
   }
 
-  .content > section.short-section {
-    margin-bottom: 52px;
-  }
 
   .button {
     min-height: 33px;
@@ -1281,6 +1283,25 @@ html[data-theme="dark"] .theme-icon-sun {
     scroll-behavior: auto;
   }
 
+  /* Printing while the dark theme is active would put pale grey on white paper. */
+  :root,
+  html[data-theme="dark"] {
+    --text: #171716;
+    --muted: #6a6965;
+    --link: #2f6ea9;
+    --link-light: #edf4fb;
+    --link-hover: #75aee0;
+    --focus-ring: #2f6ea9;
+    --button-blue: #184a82;
+    --bg: #fbfaf7;
+    --border: #dddcd7;
+    --divider-line: #b8b7b2;
+    --surface: #ffffff;
+    --theme-ring: #c78e4e;
+    --section-accent: #a11833;
+    color-scheme: light;
+  }
+
   body {
     background: #fff;
     color: #000;
@@ -1320,6 +1341,16 @@ html[data-theme="dark"] .theme-icon-sun {
     margin-bottom: 12px;
   }
 
+  .sidebar {
+    align-items: flex-start;
+  }
+
+  .cv-link,
+  .contact {
+    width: auto;
+    justify-content: flex-start;
+  }
+
   .content {
     max-width: none;
   }
@@ -1331,6 +1362,13 @@ html[data-theme="dark"] .theme-icon-sun {
 
   .abstract-panel[hidden] {
     display: block !important;
+  }
+
+  /* panel-reveal is `fill: both` and starts at opacity 0, so the one panel that
+     is open by default prints blank unless the animation is switched off. */
+  .abstract-panel,
+  .coverage-panel {
+    animation: none !important;
   }
 
   .paper-plate {

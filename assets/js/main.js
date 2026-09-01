@@ -9,6 +9,8 @@ document.querySelectorAll('.abstract-toggle').forEach((button) => {
 });
 
 document.querySelectorAll('.email-copy').forEach((button) => {
+  let copyTimer;
+
   button.addEventListener('click', async () => {
     const email = button.dataset.email;
     const status = button.parentElement.querySelector('.email-copy-status');
@@ -30,12 +32,15 @@ document.querySelectorAll('.email-copy').forEach((button) => {
     button.classList.add('copied');
     status.textContent = 'Email address copied';
 
-    window.setTimeout(() => {
+    window.clearTimeout(copyTimer);
+    copyTimer = window.setTimeout(() => {
       button.classList.remove('copied');
       status.textContent = '';
     }, 1300);
   });
 });
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 document.querySelectorAll('.drag-scroll').forEach((slider) => {
   let active = false;
@@ -49,7 +54,9 @@ document.querySelectorAll('.drag-scroll').forEach((slider) => {
     startX = event.clientX;
     startScroll = slider.scrollLeft;
     slider.classList.add('dragging');
-    slider.setPointerCapture(event.pointerId);
+    // Capture on the target, not the slider: capturing on the slider retargets
+    // pointerup/click to it and the card links never fire.
+    event.target.setPointerCapture(event.pointerId);
   });
 
   slider.addEventListener('pointermove', (event) => {
@@ -63,6 +70,10 @@ document.querySelectorAll('.drag-scroll').forEach((slider) => {
     slider.addEventListener(eventName, () => {
       active = false;
       slider.classList.remove('dragging');
+      // Deferred: the click (if any) is dispatched before timer callbacks, so the
+      // guard below still suppresses it, but a drag that ends without a click
+      // cannot leave the flag set and swallow the next activation.
+      window.setTimeout(() => { dragged = false; }, 0);
     });
   });
 
@@ -78,12 +89,12 @@ document.querySelectorAll('.drag-scroll').forEach((slider) => {
 
     if (event.key === 'ArrowRight') {
       event.preventDefault();
-      slider.scrollBy({ left: distance, behavior: 'smooth' });
+      slider.scrollBy({ left: distance, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
     }
 
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
-      slider.scrollBy({ left: -distance, behavior: 'smooth' });
+      slider.scrollBy({ left: -distance, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
     }
   });
 });
@@ -94,7 +105,6 @@ const root = document.documentElement;
 
 function updateThemeControl(theme) {
   const dark = theme === 'dark';
-  themeToggle.setAttribute('aria-pressed', String(dark));
   themeToggle.setAttribute('aria-label', dark ? 'Switch to day mode' : 'Switch to night mode');
 }
 
