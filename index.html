@@ -72,7 +72,7 @@
   </script>
   <link rel="preload" href="assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/eb-garamond-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=31">
+  <link rel="stylesheet" href="assets/css/styles.css?v=32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script src="assets/js/main.js?v=31" defer></script>
@@ -185,39 +185,41 @@
       <section class="research-section" id="job-market-paper">
         <h2><span class="section-number">02</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Job Market Paper</span></h2>
 
-        <article class="paper">
-          <h3 class="paper-title">Coffeehouses and the Rise of Science</h3>
-          <p class="paper-meta coauthors">with <a href="https://jensoehlen.github.io/">Jens Oehlen</a></p>
-          <figure class="paper-plate">
+        <article class="paper jmp-card">
+          <figure class="jmp-cover">
             <picture>
-              <source srcset="assets/img/coffeehouse.webp" type="image/webp">
-              <img src="assets/img/coffeehouse.jpg" width="960" height="657" decoding="async" alt="Gouache painting of the interior of a London coffeehouse: men in wigs seated at long communal tables reading and talking, a boy serving coffee, and a woman at the bar.">
+              <source type="image/webp" srcset="assets/img/coffeehouse-cover-900.webp 900w, assets/img/coffeehouse-cover.webp 1600w" sizes="(max-width: 900px) 100vw, 826px">
+              <img src="assets/img/coffeehouse-cover-900.jpg" srcset="assets/img/coffeehouse-cover-900.jpg 900w, assets/img/coffeehouse-cover.jpg 1600w" sizes="(max-width: 900px) 100vw, 826px" width="1600" height="800" decoding="async" alt="Gouache painting of the interior of a London coffeehouse: men in wigs seated at long communal tables reading and talking, a boy serving coffee, and a woman at the bar.">
             </picture>
             <figcaption>Interior of a London coffeehouse, c.&nbsp;1690&ndash;1700. <a href="https://www.britishmuseum.org/collection/object/P_1931-0613-2">British&nbsp;Museum</a>.</figcaption>
           </figure>
-          <div class="links">
-            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-coffee">Abstract</button>
-            <span class="link-button is-pending" aria-disabled="true">Draft upon request</span>
-            <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-coffee">Presentations</button>
-          </div>
-          <div class="abstract-panel" id="abstract-coffee" hidden>
-            <p>Can social venues raise knowledge production by lowering the cost of learning from others? Historians have long credited coffeehouses, commercial venues where strangers met across social ranks, with fostering scientific activity during the Scientific Revolution. We test this claim in seventeenth-century London. Using geocoded records and a staggered event study across parishes, we find a persistent increase in mathematical practitioners and scientific instrument shops following a parish’s first coffeehouse. Effects are concentrated among practitioners with weak ties to Oxford and Cambridge, connections between theorists and applied makers increase, and new shops turn toward experimental instruments. We argue that coffeehouses fostered this growth by lowering the cost of accessing scientific knowledge for those outside academic networks and by making experimental science interactive and public. These findings show that social venues can foster knowledge production outside formal academic networks.</p>
-          </div>
-          <div class="abstract-panel presentation-panel" id="presentations-coffee" hidden>
-            <dl class="presentation-list">
-              <div class="presentation-row">
-                <dt>2026</dt>
-                <dd>Applied Young Economists’ Webinar (scheduled); CEPR Paris Symposium (scheduled); EAYE Annual Meeting, University of the Basque Country; IIES, Stockholm University; RIDGE Forum, University of the West Indies; SIOE Conference, INSEAD Fontainebleau; TSE; Uppsala Workshop in Economic History; Workshop on Growth, History and Development, University of Southern Denmark; Yale-UB HPE Workshop, University of Barcelona</dd>
-              </div>
-              <div class="presentation-row">
-                <dt>2025</dt>
-                <dd>SUDSWEC, Stockholm School of Economics</dd>
-              </div>
-              <div class="presentation-row">
-                <dt>2024</dt>
-                <dd>University of Oxford</dd>
-              </div>
-            </dl>
+          <div class="jmp-card-body">
+            <h3 class="paper-title">Coffeehouses and the Rise of Science</h3>
+            <p class="paper-meta coauthors">with <a href="https://jensoehlen.github.io/">Jens Oehlen</a></p>
+            <div class="links">
+              <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-coffee">Abstract</button>
+              <span class="link-button is-pending" aria-disabled="true">Draft upon request</span>
+              <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="presentations-coffee">Presentations</button>
+            </div>
+            <div class="abstract-panel" id="abstract-coffee" hidden>
+              <p>Can social venues raise knowledge production by lowering the cost of learning from others? Historians have long credited coffeehouses, commercial venues where strangers met across social ranks, with fostering scientific activity during the Scientific Revolution. We test this claim in seventeenth-century London. Using geocoded records and a staggered event study across parishes, we find a persistent increase in mathematical practitioners and scientific instrument shops following a parish’s first coffeehouse. Effects are concentrated among practitioners with weak ties to Oxford and Cambridge, connections between theorists and applied makers increase, and new shops turn toward experimental instruments. We argue that coffeehouses fostered this growth by lowering the cost of accessing scientific knowledge for those outside academic networks and by making experimental science interactive and public. These findings show that social venues can foster knowledge production outside formal academic networks.</p>
+            </div>
+            <div class="abstract-panel presentation-panel" id="presentations-coffee" hidden>
+              <dl class="presentation-list">
+                <div class="presentation-row">
+                  <dt>2026</dt>
+                  <dd>Applied Young Economists’ Webinar (scheduled); CEPR Paris Symposium (scheduled); EAYE Annual Meeting, University of the Basque Country; IIES, Stockholm University; RIDGE Forum, University of the West Indies; SIOE Conference, INSEAD Fontainebleau; TSE; Uppsala Workshop in Economic History; Workshop on Growth, History and Development, University of Southern Denmark; Yale-UB HPE Workshop, University of Barcelona</dd>
+                </div>
+                <div class="presentation-row">
+                  <dt>2025</dt>
+                  <dd>SUDSWEC, Stockholm School of Economics</dd>
+                </div>
+                <div class="presentation-row">
+                  <dt>2024</dt>
+                  <dd>University of Oxford</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </article>
 
@@ -227,7 +229,7 @@
         <h2><span class="section-number">03</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Working Papers</span></h2>
 
         <article class="paper">
-          <h3 class="paper-title">Learning to Participate: The&nbsp;Effects of the First Female Teachers</h3>
+          <h3 class="paper-title"><span class="title-part">Learning to Participate:</span> <span class="title-part">The&nbsp;Effects of the First Female Teachers</span></h3>
           <p class="paper-meta coauthors">with <a href="https://mattiasfolkestad.com/">Mattias Folkestad</a></p>
           <div class="links">
             <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-teachers">Abstract</button>
@@ -256,7 +258,7 @@
         </article>
 
         <article class="paper">
-          <h3 class="paper-title">Wealth Confiscation and Elite Persistence: Evidence from the Great Reduction</h3>
+          <h3 class="paper-title"><span class="title-part">Wealth Confiscation and Elite Persistence:</span> <span class="title-part">Evidence from the Great Reduction</span></h3>
           <p class="paper-meta coauthors">with <a href="https://www.jonatanriberth.com/">Jonatan Riberth</a></p>
           <div class="links">
             <button class="link-button abstract-toggle" type="button" aria-expanded="false" aria-controls="abstract-reduction">Abstract</button>
@@ -290,7 +292,7 @@
         <h2><span class="section-number">04</span><span class="section-separator" aria-hidden="true">/</span><span class="section-title">Work in Progress</span></h2>
 
         <article class="paper compact">
-          <h3 class="paper-title">Governing the Hajj: Colonial Mobility and Islamic Organization in the Dutch East Indies</h3>
+          <h3 class="paper-title"><span class="title-part">Governing the Hajj:</span> <span class="title-part">Colonial Mobility and Islamic Organization in the Dutch East Indies</span></h3>
           <div class="links">
             <span class="link-button is-pending" aria-disabled="true">Abstract coming soon</span>
             <span class="link-button is-pending" aria-disabled="true">Draft coming soon</span>
@@ -478,6 +480,6 @@
 
     </div>
   </main>
-  <footer class="site-footer">Last updated September 28, 2026</footer>
+  <footer class="site-footer">Last updated October 2, 2026</footer>
 </body>
 </html>

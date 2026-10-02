@@ -604,6 +604,12 @@ p {
   text-wrap: balance;
 }
 
+/* A title that does not fit on one line breaks after its colon, so the
+   subtitle starts its own line instead of splitting mid-phrase. */
+.paper-title .title-part {
+  display: inline-block;
+}
+
 .paper-meta a {
   color: inherit;
 }
@@ -681,34 +687,78 @@ p {
   hyphens: none;
 }
 
-/* ---- Job market paper plate --------------------------------------------- */
+/* ---- Job market paper card ---------------------------------------------- */
 
-.paper-plate {
-  margin: 14px 0 16px;
-  max-width: 460px;
+.jmp-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(23, 23, 22, 0.04), 0 16px 34px -26px rgba(23, 23, 22, 0.38);
 }
 
-.paper-plate picture {
+html[data-theme="dark"] .jmp-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 16px 34px -26px rgba(0, 0, 0, 0.7);
+}
+
+.jmp-cover {
+  margin: 0;
+}
+
+.jmp-cover picture {
   display: block;
 }
 
-.paper-plate img {
+.jmp-cover img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 2px;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
 }
 
-html[data-theme="dark"] .paper-plate img {
+html[data-theme="dark"] .jmp-cover img {
   filter: brightness(0.9) saturate(0.95);
 }
 
-.paper-plate figcaption {
-  margin-top: 7px;
-  font-size: 13.5px;
+.jmp-cover figcaption {
+  padding: 8px 24px 0;
+  font-size: 12.5px;
   line-height: 1.5;
-  color: var(--muted);
   font-style: italic;
+  color: var(--muted);
+  text-align: right;
+}
+
+.jmp-card-body {
+  padding: 6px 24px 22px;
+}
+
+.jmp-card .paper-title {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.jmp-card .links {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .jmp-cover figcaption {
+    padding: 7px 16px 0;
+  }
+
+  .jmp-card-body {
+    padding: 4px 16px 18px;
+  }
+
+  /* 15em is the title's width plus a margin; the card leaves the viewport
+     width minus 62px, so this keeps it on one line down to 320px. */
+  .jmp-card .paper-title {
+    font-size: min(20px, calc((100vw - 62px) / 15));
+  }
 }
 
 .coverage-panel {
@@ -958,6 +1008,7 @@ html.theme-shift .sidebar h1,
 html.theme-shift .affiliation,
 html.theme-shift .bio p,
 html.theme-shift .paper-title,
+html.theme-shift .paper-title .title-part,
 html.theme-shift .paper-meta,
 html.theme-shift .abstract-panel,
 html.theme-shift .abstract-panel p,
@@ -970,15 +1021,15 @@ html.theme-shift .teaching-group .teaching-where,
 html.theme-shift .teaching-year,
 html.theme-shift .teaching-course,
 html.theme-shift .teaching-note,
-html.theme-shift .paper-plate figcaption,
+html.theme-shift .jmp-cover figcaption,
 html.theme-shift .site-footer {
   transition-delay: 80ms;
 }
 
-/* The plate is dimmed in dark mode, and `filter` is not in the shared
+/* The cover is dimmed in dark mode, and `filter` is not in the shared
    property list above, so it needs its own transition or it would snap. */
-html.theme-shift .paper-plate img {
-  transition-property: filter;
+html.theme-shift .jmp-cover img {
+  transition-property: filter, border-color;
   transition-duration: 400ms;
   transition-delay: 80ms;
 }
@@ -1412,12 +1463,34 @@ html[data-theme="dark"] .theme-icon-sun {
     animation: none !important;
   }
 
-  .paper-plate {
-    max-width: 200px;
+  .jmp-card {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .jmp-cover {
+    max-width: 240px;
     break-inside: avoid;
   }
 
-  html[data-theme="dark"] .paper-plate img {
+  .jmp-cover img {
+    border-bottom: 0;
+  }
+
+  .jmp-cover figcaption,
+  .jmp-card-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .jmp-cover figcaption {
+    text-align: left;
+  }
+
+  html[data-theme="dark"] .jmp-cover img {
     filter: none;
   }
 
