@@ -186,6 +186,13 @@ html[data-theme="dark"] .top-divider-mark::after {
   align-self: start;
 }
 
+/* The sidebar is ~620px tall; in a shorter window it would hide its own links. */
+@media (max-height: 660px) {
+  .sidebar {
+    position: static;
+  }
+}
+
 .sidebar h1 {
   font-family: "EB Garamond", Georgia, "Times New Roman", serif;
   font-size: 32px;
@@ -536,6 +543,7 @@ p {
 
 .abstract-toggle::after {
   content: "▾";
+  content: "▾" / "";
   display: inline-block;
   margin-left: 0.32em;
   transform-origin: center;
@@ -610,6 +618,7 @@ p {
   line-height: 1.65;
   margin: 0 0 5px;
   color: var(--muted);
+  text-wrap: pretty;
 }
 
 .links {
@@ -766,6 +775,11 @@ html[data-theme="dark"] .paper-plate img {
 .coverage-slider:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+/* Snapped cards sit flush with the scroll edge, which clips an outer ring. */
+.coverage-slider .coverage-card:focus-visible {
+  outline-offset: -2px;
 }
 
 .coverage-slider .coverage-card {
@@ -1096,6 +1110,7 @@ html[data-theme="dark"] .theme-icon-sun {
   color: var(--text);
   font-size: 17px;
   line-height: 1.5;
+  text-wrap: pretty;
 }
 
 .teaching-note {
@@ -1250,7 +1265,8 @@ html[data-theme="dark"] .theme-icon-sun {
   .button,
   .email-copy,
   .link-button,
-  .theme-toggle {
+  .theme-toggle,
+  .abstract-toggle::after {
     transition: none;
   }
 
@@ -1371,6 +1387,16 @@ html[data-theme="dark"] .theme-icon-sun {
     break-inside: avoid;
   }
 
+  /* The JMP entry is nearly page-sized; keeping it whole left page 2 blank. */
+  #job-market-paper .paper {
+    break-inside: auto;
+  }
+
+  .meta-lines,
+  .teaching-group {
+    break-inside: avoid;
+  }
+
   h2 {
     break-after: avoid;
   }
@@ -1391,6 +1417,10 @@ html[data-theme="dark"] .theme-icon-sun {
     break-inside: avoid;
   }
 
+  html[data-theme="dark"] .paper-plate img {
+    filter: none;
+  }
+
   .abstract-panel {
     border-left-color: #777;
   }
@@ -1399,13 +1429,30 @@ html[data-theme="dark"] .theme-icon-sun {
     max-width: none;
   }
 
-  .content a[href^="http"]:not(.coverage-card)::after {
+  .content a[href^="http"]:not(.coverage-card)::after,
+  .content a.download-link::after {
     content: " (" attr(href) ")";
     color: #555;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 8pt;
     font-weight: 400;
     overflow-wrap: anywhere;
+  }
+
+  /* Site PDFs have relative hrefs, so spell out the full address. */
+  .content a.download-link::after {
+    content: " (https://www.monirbounadi.com/" attr(href) ")";
+  }
+
+  /* Mask icons are not painted without background graphics; drop their gap. */
+  .download-link::before,
+  .external-link::before {
+    display: none;
+  }
+
+  /* Inside the inline-flex buttons the leading space of the URL collapses. */
+  .links a::after {
+    margin-left: 0.3em;
   }
 }
 
@@ -1444,6 +1491,7 @@ html[data-theme="dark"] .theme-icon-sun {
 
 .meta-lines dd > span:not(:last-child)::after {
   content: "\00b7";
+  content: "\00b7" / "";
   color: var(--muted);
   margin: 0 9px;
 }
@@ -1463,5 +1511,19 @@ html[data-theme="dark"] .theme-icon-sun {
   .meta-lines dd > span:not(:last-child)::after {
     content: none;
     margin: 0;
+  }
+}
+
+/* Mask icons are painted with background-color, which forced colours resets. */
+@media (forced-colors: active) {
+  .download-link::before,
+  .external-link::before {
+    forced-color-adjust: none;
+    background-color: LinkText;
+  }
+
+  .email-copy::after {
+    forced-color-adjust: none;
+    background-color: ButtonText;
   }
 }

@@ -148,4 +148,4 @@ function followLocalTheme() {
   applyTheme(preference.theme, preference.mode);
 }
 
-window.setInterval(followLocalTheme, 60_000);
+window.setInterval(followLocalTheme, 60000);
