@@ -54,6 +54,8 @@ document.querySelectorAll('.drag-scroll').forEach((slider) => {
   let startScroll = 0;
 
   slider.addEventListener('pointerdown', (event) => {
+    // Touch and pen use native scrolling; drag-to-scroll is for mice only.
+    if (event.pointerType !== 'mouse') return;
     active = true;
     dragged = false;
     startX = event.clientX;

@@ -815,7 +815,7 @@ html[data-theme="dark"] .jmp-cover img {
   gap: 12px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
-  touch-action: pan-y;
+  touch-action: pan-x pan-y;
   margin-top: 7px;
   padding: 6px 6px 12px;
   scroll-snap-type: x mandatory;
