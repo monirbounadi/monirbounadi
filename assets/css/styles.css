@@ -108,78 +108,6 @@ strong {
   align-items: start;
 }
 
-.top-divider {
-  width: var(--sidebar-width);
-  margin: 32px auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.top-divider-line {
-  height: 1px;
-  flex: 1 1 auto;
-  max-width: 153px;
-  background: linear-gradient(to right, transparent, color-mix(in srgb, var(--divider-line) 88%, var(--bg)));
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.top-divider-line:last-child {
-  background: linear-gradient(to left, transparent, color-mix(in srgb, var(--divider-line) 88%, var(--bg)));
-}
-
-.top-divider-line:first-child {
-  transform-origin: right center;
-  animation: top-divider-line 320ms cubic-bezier(0.22, 0.61, 0.36, 1) 940ms forwards;
-}
-
-.top-divider-line:last-child {
-  transform-origin: left center;
-  animation: top-divider-line 320ms cubic-bezier(0.22, 0.61, 0.36, 1) 880ms forwards;
-}
-
-.top-divider-mark {
-  position: relative;
-  width: 22px;
-  height: 19px;
-  flex: 0 0 auto;
-  opacity: 0;
-  transform: scale(0.8);
-  animation: top-divider-mark 420ms cubic-bezier(0.34, 1.56, 0.64, 1) 550ms forwards;
-}
-
-/* Two stacked layers so the mark crossfades between themes
-   rather than swapping the image on one frame. */
-.top-divider-mark::before,
-.top-divider-mark::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.top-divider-mark::before {
-  background-image: url("../img/coffee-cup-mark.png");
-  opacity: 1;
-}
-
-.top-divider-mark::after {
-  background-image: url("../img/coffee-cup-mark-dark.png");
-  opacity: 0;
-}
-
-html[data-theme="dark"] .top-divider-mark::before {
-  opacity: 0;
-}
-
-html[data-theme="dark"] .top-divider-mark::after {
-  opacity: 1;
-}
-
 .sidebar {
   position: sticky;
   top: 30px;
@@ -896,13 +824,6 @@ html[data-theme="dark"] .jmp-cover img {
   }
 }
 
-@keyframes top-divider-line {
-  to {
-    opacity: 0.62;
-    transform: scaleX(1);
-  }
-}
-
 @keyframes theme-spin {
   0% {
     transform: rotate(0deg) scale(1);
@@ -917,23 +838,9 @@ html[data-theme="dark"] .jmp-cover img {
   }
 }
 
-@keyframes top-divider-mark {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
   ::selection {
     background: var(--link-light);
-  }
-
-  .top-divider-line {
-    background: linear-gradient(to right, transparent, var(--divider-line));
-  }
-
-  .top-divider-line:last-child {
-    background: linear-gradient(to left, transparent, var(--divider-line));
   }
 
   .coverage-card {
@@ -1052,8 +959,7 @@ html.theme-shift .job-market {
 }
 
 html.theme-shift h2,
-html.theme-shift h2::after,
-html.theme-shift .top-divider-line {
+html.theme-shift h2::after {
   transition-delay: 120ms;
 }
 
@@ -1180,11 +1086,6 @@ html[data-theme="dark"] .theme-icon-sun {
 
 /* Keep the research column comfortably readable before switching to one column. */
 @media (max-width: 900px) {
-  .top-divider {
-    width: min(310px, calc(100% - 86px));
-    margin-top: 32px;
-  }
-
   .site {
     --sidebar-width: 240px;
     width: min(100% - 36px, 700px);
@@ -1250,11 +1151,6 @@ html[data-theme="dark"] .theme-icon-sun {
   .teaching-group li {
     grid-template-columns: 64px minmax(0, 1fr);
     column-gap: 12px;
-  }
-
-  .top-divider {
-    width: min(250px, calc(100% - 70px));
-    gap: 9px;
   }
 
   .site {
@@ -1331,8 +1227,6 @@ html[data-theme="dark"] .theme-icon-sun {
 
   .abstract-panel:not([hidden]),
   .coverage-panel:not([hidden]),
-  .top-divider-line,
-  .top-divider-mark,
   .theme-toggle.spin {
     animation: none;
   }
@@ -1343,15 +1237,6 @@ html[data-theme="dark"] .theme-icon-sun {
     transition: none !important;
   }
 
-  .top-divider-line {
-    opacity: 0.62;
-    transform: scaleX(1);
-  }
-
-  .top-divider-mark {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 @media print {
@@ -1388,7 +1273,6 @@ html[data-theme="dark"] .theme-icon-sun {
     font-size: 11pt;
   }
 
-  .top-divider,
   .theme-toggle,
   .social,
   .email-copy,
