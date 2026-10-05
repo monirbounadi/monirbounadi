@@ -695,7 +695,6 @@ p {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(23, 23, 22, 0.04), 0 16px 34px -26px rgba(23, 23, 22, 0.38);
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -709,10 +708,6 @@ p {
     border-color: #c4a07e;
     background-color: #1f2530;
   }
-}
-
-html[data-theme="dark"] .jmp-card {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 16px 34px -26px rgba(0, 0, 0, 0.7);
 }
 
 .jmp-cover {
