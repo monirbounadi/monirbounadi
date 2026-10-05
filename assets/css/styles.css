@@ -851,10 +851,6 @@ html[data-theme="dark"] .jmp-cover img {
     background: var(--link-light);
   }
 
-  .coverage-card {
-    border: 1px solid var(--border);
-  }
-
   .coverage-card span {
     border-top: 1px solid var(--border);
   }
