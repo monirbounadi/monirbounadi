@@ -44,7 +44,6 @@
   --button-blue: #184a82;
   --bg: #fbfaf7;
   --border: #dddcd7;
-  --divider-line: #b8b7b2;
   --surface: #ffffff;
   --theme-ring: #c78e4e;
   --section-accent: #a11833;
@@ -61,7 +60,6 @@ html[data-theme="dark"] {
   --button-blue: #89add5;
   --bg: #171c25;
   --border: #323a47;
-  --divider-line: #465160;
   --surface: #1d2430;
   --theme-ring: #d6a05d;
   --section-accent: #e0a1ad;
@@ -1270,7 +1268,6 @@ html[data-theme="dark"] .theme-icon-sun {
     --button-blue: #184a82;
     --bg: #fbfaf7;
     --border: #dddcd7;
-    --divider-line: #b8b7b2;
     --surface: #ffffff;
     --theme-ring: #c78e4e;
     --section-accent: #a11833;
