@@ -696,6 +696,20 @@ p {
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: 0 1px 2px rgba(23, 23, 22, 0.04), 0 16px 34px -26px rgba(23, 23, 22, 0.38);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+@media (hover: hover) {
+  .jmp-card:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+    box-shadow: 0 2px 4px rgba(23, 23, 22, 0.06), 0 22px 40px -24px rgba(23, 23, 22, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jmp-card { transition: none; }
+  .jmp-card:hover { transform: none; }
 }
 
 html[data-theme="dark"] .jmp-card {
