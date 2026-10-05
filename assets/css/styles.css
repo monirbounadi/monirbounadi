@@ -630,6 +630,12 @@ p {
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Touch screens have no hover, so an open panel lights the card up instead. */
+.jmp-card:has(.abstract-toggle[aria-expanded="true"]) {
+  border-color: var(--cappuccino-border);
+  background-color: var(--cappuccino-tint);
+}
+
 @media (hover: hover) {
   .jmp-card:hover {
     border-color: var(--cappuccino-border);
