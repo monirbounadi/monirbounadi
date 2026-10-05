@@ -48,6 +48,9 @@
   --theme-ring: #c78e4e;
   --section-accent: #a11833;
   --focus-ring: #2f6ea9;
+  --cappuccino: #7d5a3c;
+  --cappuccino-border: #b08968;
+  --cappuccino-tint: #fbf7f2;
   color-scheme: light;
 }
 
@@ -64,6 +67,9 @@ html[data-theme="dark"] {
   --theme-ring: #d6a05d;
   --section-accent: #e0a1ad;
   --focus-ring: #b7d8f4;
+  --cappuccino: #d2b08e;
+  --cappuccino-border: #c4a07e;
+  --cappuccino-tint: #1f2530;
   color-scheme: dark;
 }
 
@@ -566,10 +572,6 @@ p {
   padding: 2px 0 2px 18px;
 }
 
-.presentation-panel p {
-  color: var(--muted);
-}
-
 .presentation-list {
   margin: 0;
   color: var(--muted);
@@ -617,9 +619,9 @@ p {
 
 .jmp-card {
   /* Cappuccino accent: buttons, links and focus rings inside the card. */
-  --button-blue: #7d5a3c;
-  --link: #7d5a3c;
-  --focus-ring: #7d5a3c;
+  --button-blue: var(--cappuccino);
+  --link: var(--cappuccino);
+  --focus-ring: var(--cappuccino);
   margin: 0;
   overflow: hidden;
   background: var(--surface);
@@ -628,21 +630,10 @@ p {
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-html[data-theme="dark"] .jmp-card {
-  --button-blue: #d2b08e;
-  --link: #d2b08e;
-  --focus-ring: #d2b08e;
-}
-
 @media (hover: hover) {
   .jmp-card:hover {
-    border-color: #b08968;
-    background-color: #fbf7f2;
-  }
-
-  html[data-theme="dark"] .jmp-card:hover {
-    border-color: #c4a07e;
-    background-color: #1f2530;
+    border-color: var(--cappuccino-border);
+    background-color: var(--cappuccino-tint);
   }
 }
 
@@ -1267,6 +1258,9 @@ html[data-theme="dark"] .theme-icon-sun {
     --surface: #ffffff;
     --theme-ring: #c78e4e;
     --section-accent: #a11833;
+    --cappuccino: #7d5a3c;
+    --cappuccino-border: #b08968;
+    --cappuccino-tint: #fbf7f2;
     color-scheme: light;
   }
 
