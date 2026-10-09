@@ -351,27 +351,6 @@ h2::after {
   order: 2;
 }
 
-h2 .section-number {
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  margin-right: 6px;
-}
-
-h2 .section-separator {
-  color: var(--muted);
-  font-weight: 400;
-  margin-right: 7px;
-}
-
-h2 .section-title {
-  order: 1;
-}
-
-h2 .section-number,
-h2 .section-separator {
-  order: 1;
-}
-
 .content > section,
 #cv,
 #contact {
