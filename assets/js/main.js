@@ -4,6 +4,7 @@ document.querySelectorAll('.abstract-toggle').forEach((button) => {
     const expanded = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', String(!expanded));
     button.classList.toggle('active', !expanded);
+    button.dataset.touched = '';
     panel.hidden = expanded;
   });
 });
