@@ -521,6 +521,14 @@ p {
   display: inline-block;
 }
 
+/* On phones a subtitle too long for one line would push the title to three
+   lines, so these titles wrap as running text instead. */
+@media (max-width: 520px) {
+  .paper-title.title-flow .title-part {
+    display: inline;
+  }
+}
+
 .paper-meta a {
   color: inherit;
 }
