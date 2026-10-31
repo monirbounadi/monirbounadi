@@ -173,6 +173,7 @@ strong {
   min-width: 92px;
   padding-left: 14px;
   padding-right: 14px;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, opacity 200ms ease;
 }
 
 .cv-link .jmp-link {
@@ -187,9 +188,14 @@ strong {
   letter-spacing: 0.01em;
 }
 
-.cv-link .jmp-link:hover {
-  color: var(--section-accent);
-  background: transparent;
+/* The filled/outlined pair keeps its look in every state; a tap must not
+   leave a sticky inverted hover on touch screens. */
+.cv-link .jmp-link:hover,
+.cv-link .jmp-link:focus,
+.cv-link .jmp-link:active {
+  color: var(--surface);
+  background: var(--section-accent);
+  opacity: 1;
 }
 
 .cv-link .download-link {
@@ -208,10 +214,19 @@ strong {
   display: none;
 }
 
-.cv-link .download-link:hover {
+.cv-link .download-link:hover,
+.cv-link .download-link:focus,
+.cv-link .download-link:active {
   border-color: var(--section-accent);
-  color: var(--surface);
-  background: var(--section-accent);
+  color: var(--section-accent);
+  background: transparent;
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cv-link .button:hover {
+    opacity: 0.85;
+  }
 }
 
 .contact {
