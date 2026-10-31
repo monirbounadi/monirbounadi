@@ -169,8 +169,10 @@ strong {
 }
 
 .cv-link .button {
-  flex: 1 1 0;
-  max-width: 128px;
+  flex: 0 0 auto;
+  min-width: 92px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .cv-link .jmp-link {
