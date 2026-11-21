@@ -728,6 +728,12 @@ html[data-theme="dark"] .jmp-cover img {
   .jmp-card .paper-title {
     font-size: min(20px, calc((100vw - 62px) / 15));
   }
+
+  /* Four buttons need ~404px; a 2x2 grid reads better than a 3+1 wrap. */
+  .jmp-card .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .coverage-panel {
